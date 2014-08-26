@@ -35,5 +35,7 @@ namespace cn.zuoanqh.open.zut
 
       return new Tuple<List<T>, List<T>>(added, deleted);
     }
+
+    
   }
 }
