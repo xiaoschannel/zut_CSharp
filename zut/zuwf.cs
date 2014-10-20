@@ -23,6 +23,7 @@ namespace cn.zuoanqh.open.zut
       }
       return answer;
     }
+
     /// <summary>
     /// 
     /// </summary>
@@ -41,6 +42,7 @@ namespace cn.zuoanqh.open.zut
       }
       return answer;
     }
+
     public static void ListView_RemoveItemsWithSetofText(ListView v, HashSet<string> s)
     {
       List<ListViewItem> removeList = new List<ListViewItem>();
@@ -49,10 +51,12 @@ namespace cn.zuoanqh.open.zut
       foreach (ListViewItem i in removeList)
         v.Items.Remove(i);
     }
+
     public static void ListView_AddTextIfNotContained(ListView v, string text)
     {
       if (!ListView_ContainsItemWithText(v, text)) v.Items.Add(text);
     }
+
     public static void ListView_AdjustTileSizetoFirstItem(ListView v)
     {
       v.TileSize = new System.Drawing.Size((int)Math.Round(v.CreateGraphics().MeasureString(v.Items[0].Text, v.Font).Width) + v.Items[0].Text.Length * 1 + 4, 28);
@@ -67,6 +71,7 @@ namespace cn.zuoanqh.open.zut
       //v.Update();
 
     }
+
     public static string ListView_GenerateStringofItems(ListView l)
     {
       string s = "";
@@ -84,6 +89,10 @@ namespace cn.zuoanqh.open.zut
 
     public static void ListBox_RemoveAllSelectedItems(ListBox l)
     {
+      ListBox_RemoveAllSelectedItems(l, null);
+    }
+    public static void ListBox_RemoveAllSelectedItems(ListBox l, Action<object> onRemove)
+    {
       if (l.SelectedIndices.Count == 0) return;
       SortedSet<int> set = new SortedSet<int>();
       foreach (object i in l.SelectedItems)
@@ -92,23 +101,33 @@ namespace cn.zuoanqh.open.zut
       }
       while (set.Count > 0)
       {
+        if (onRemove != null) onRemove.Invoke(l.Items[set.Max]);
         l.Items.RemoveAt(set.Max);
         set.Remove(set.Max);
       }
     }
+
     public static bool ListBox_ContainsItemWithText(ListBox l, string s)
     {
       foreach (object i in l.Items)
         if (i.ToString() == s) return true;
       return false;
     }
+
     public static void ListBox_AddTextIfNotContained(ListBox l, string s)
     {
       if (!ListBox_ContainsItemWithText(l, s)) l.Items.Add(s);
     }
+
+    public static bool ListBox_HaveItemSelected(ListBox l)
+    {
+      return l.SelectedItems.Count > 0;
+    }
+
     public static void Clipboard_SetTextIfNotEmpty(string s)
     {
       if (s.Trim().Length > 0) Clipboard.SetText(s, TextDataFormat.UnicodeText);
     }
+
   }
 }
