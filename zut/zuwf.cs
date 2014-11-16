@@ -5,7 +5,7 @@ using System.Windows.Forms;
 namespace cn.zuoanqh.open.zut
 {
   /// <summary>
-  /// zut class for Windows Form.
+  /// Zuoanqh's Utility for Windows Forms.
   /// </summary>
   public static class zuwf
   {
@@ -13,65 +13,63 @@ namespace cn.zuoanqh.open.zut
     /// Remove all selected items in given ListView.
     /// </summary>
     /// <param name="v">ListView to remove item.</param>
-    /// <returns>Number of selected items.</returns>
-    public static int ListView_RemoveSelected(ListView v)
+    public static void ListView_RemoveSelected(ListView v)
     {
-      int answer = v.SelectedIndices.Count;
       foreach (ListViewItem i in v.SelectedItems)
-      {
         v.Items.RemoveAt(i.Index);
-      }
-      return answer;
     }
 
     /// <summary>
-    /// 
+    /// Search the content of given ListView for the given text.
     /// </summary>
+    /// <param name="v"></param>
     /// <param name="text"></param>
-    /// <returns></returns>
+    /// <returns>Whether an item with given text is found.</returns>
     public static bool ListView_ContainsItemWithText(ListView v, string text)
     {
-      bool answer = false;
       foreach (ListViewItem i in v.Items)
-      {
-        if (i.Text == text)
-        {
-          answer = true;
-          break;
-        }
-      }
-      return answer;
+        if (i.Text.Equals(text)) return true;
+      return false;
     }
-
+    /// <summary>
+    /// Remove all items with text appeared in given set in given ListView.
+    /// </summary>
+    /// <param name="v"></param>
+    /// <param name="s"></param>
     public static void ListView_RemoveItemsWithSetofText(ListView v, HashSet<string> s)
     {
       List<ListViewItem> removeList = new List<ListViewItem>();
+
       foreach (ListViewItem i in v.Items)
         if (s.Contains(i.Text)) removeList.Add(i);
-      foreach (ListViewItem i in removeList)
-        v.Items.Remove(i);
-    }
 
+      removeList.ForEach((i) => v.Items.Remove(i));
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="v"></param>
+    /// <param name="text"></param>
     public static void ListView_AddTextIfNotContained(ListView v, string text)
     {
       if (!ListView_ContainsItemWithText(v, text)) v.Items.Add(text);
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="v"></param>
     public static void ListView_AdjustTileSizetoFirstItem(ListView v)
     {
       v.TileSize = new System.Drawing.Size((int)Math.Round(v.CreateGraphics().MeasureString(v.Items[0].Text, v.Font).Width) + v.Items[0].Text.Length * 1 + 4, 28);
       string t = v.Items[v.Items.Count - 1].Text;
       v.Items.RemoveAt(v.Items.Count - 1);
       v.Items.Add(t);
-      //v.Refresh();
-
-      //v.PerformLayout();
-      //v.ResumeLayout(true);
-      //v.Invalidate();
-      //v.Update();
-
     }
-
+    /// <summary>
+    /// Create a string by concatonating item's texts in given list view, sepearated by a space.
+    /// </summary>
+    /// <param name="l"></param>
+    /// <returns></returns>
     public static string ListView_GenerateStringofItems(ListView l)
     {
       string s = "";
@@ -79,18 +77,58 @@ namespace cn.zuoanqh.open.zut
         s += i.Text + " ";
       return s.Trim();
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="l"></param>
+    public static void ListBox_SelectLast(ListBox l)
+    {
+      l.SelectedIndex = l.Items.Count - 1;
+    }
+    /// <summary>
+    /// Replace the old item at given index by the given item.
+    /// </summary>
+    /// <param name="l"></param>
+    /// <param name="index"></param>
+    /// <param name="item"></param>
+    public static void ListBox_UpdateItem(ListBox l, int index, object item)
+    {
+      l.Items.RemoveAt(index);
+      l.Items.Insert(index, item);
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="l"></param>
+    /// <param name="item"></param>
+    public static void ListBox_UpdateSelectedItem(ListBox l, object item)
+    {
+      ListBox_UpdateItem(l, l.SelectedIndex, item);
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="l"></param>
+    /// <returns></returns>
     public static string ListBox_GetSelectedItemText(ListBox l)
     {
       if (l.SelectedItem != null)
         return l.SelectedItem.ToString();
       return null;
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="l"></param>
     public static void ListBox_RemoveAllSelectedItems(ListBox l)
     {
       ListBox_RemoveAllSelectedItems(l, null);
     }
+    /// <summary>
+    /// Remove all selected items, but invoke given action with item removing as parameter before removing.
+    /// </summary>
+    /// <param name="l"></param>
+    /// <param name="onRemove"></param>
     public static void ListBox_RemoveAllSelectedItems(ListBox l, Action<object> onRemove)
     {
       if (l.SelectedIndices.Count == 0) return;
@@ -107,23 +145,40 @@ namespace cn.zuoanqh.open.zut
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="l"></param>
+    /// <param name="s"></param>
+    /// <returns></returns>
     public static bool ListBox_ContainsItemWithText(ListBox l, string s)
     {
       foreach (object i in l.Items)
         if (i.ToString() == s) return true;
       return false;
     }
-
+    /// <summary>
+    /// Adds given string as an item if given ListBox does not contain one already.
+    /// </summary>
+    /// <param name="l"></param>
+    /// <param name="s"></param>
     public static void ListBox_AddTextIfNotContained(ListBox l, string s)
     {
       if (!ListBox_ContainsItemWithText(l, s)) l.Items.Add(s);
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="l"></param>
+    /// <returns></returns>
     public static bool ListBox_HaveItemSelected(ListBox l)
     {
       return l.SelectedItems.Count > 0;
     }
-
+    /// <summary>
+    /// Avoids setting text to clipboard if given string does not have actual charecters.
+    /// </summary>
+    /// <param name="s"></param>
     public static void Clipboard_SetTextIfNotEmpty(string s)
     {
       if (s.Trim().Length > 0) Clipboard.SetText(s, TextDataFormat.UnicodeText);

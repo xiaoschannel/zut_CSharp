@@ -7,15 +7,22 @@ using System.Threading.Tasks;
 namespace cn.zuoanqh.open.zut
 {
   /// <summary>
-  /// zut class for easy-to-use debug statements and error handling
+  /// Zuoanqh's utility for ERRor handling.
   /// </summary>
   class zerr
   {
-    public static readonly bool DEBUG = true;
-    public static readonly bool ERRS = true;
+    /// <summary>
+    /// Switch variable for d methods. You'll probably want to change this in your Program.cs.
+    /// </summary>
+    public static bool DEBUG = true;
 
     /// <summary>
-    /// print if ERRS is true
+    /// Switch variable for e methods. You'll probably want to change this in your Program.cs.
+    /// </summary>
+    public static bool ERRS = true;
+
+    /// <summary>
+    /// print given message if ERRS is true.
     /// </summary>
     /// <param name="message"></param>
     public static void e(string message)
@@ -23,24 +30,44 @@ namespace cn.zuoanqh.open.zut
       if (ERRS) Console.WriteLine(message);
     }
 
+    /// <summary>
+    /// print in format of "subject: message" if ERRS is true.
+    /// </summary>
+    /// <param name="subject"></param>
+    /// <param name="message"></param>
     public static void e(string subject, string message)
     {
       e(subject + ": " + message);
     }
-    public static void pw(params string[] words)
-    {
-      foreach (string s in words)
-        Console.Write(s + " ");
-      Console.WriteLine();
-    }
+
+    /// <summary>
+    /// print given message if DEBUG is true.
+    /// </summary>
+    /// <param name="message"></param>
     public static void d(string message)
     {
       if (DEBUG) Console.WriteLine(message);
     }
 
+    /// <summary>
+    /// print in format of "subject: message" if ERRS is true.
+    /// </summary>
+    /// <param name="subject"></param>
+    /// <param name="message"></param>
     public static void d(string subject, string message)
     {
       d(subject + ": " + message);
+    }
+
+    /// <summary>
+    /// Print given words with spaces in between.
+    /// </summary>
+    /// <param name="words"></param>
+    public static void pw(params string[] words)
+    {
+      foreach (string s in words)
+        Console.Write(s + " ");
+      Console.WriteLine();
     }
   }
 }

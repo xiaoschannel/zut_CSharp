@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\zut.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,26 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExclusiveControlGroups.cs" />
     <Compile Include="Pair.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SelectableFlowList.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="SelectableFlowList.Designer.cs">
-      <DependentUpon>SelectableFlowList.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Twin.cs" />
     <Compile Include="zerr.cs" />
     <Compile Include="zusp.cs" />
-    <Compile Include="zut.cs" />
+    <Compile Include="zu.cs" />
     <Compile Include="zuwf.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="SelectableFlowList.resx">
-      <DependentUpon>SelectableFlowList.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

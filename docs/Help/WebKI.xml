@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="addGroup method" Url="html/ded914b0-3f9e-605a-aa33-767f51693a21.htm" />
+  <HelpKINode Title="ChopHead method" Url="html/050038eb-a776-5b72-af70-5f092e202877.htm" />
+  <HelpKINode Title="ChopTail method" Url="html/fb6bdd59-031f-3f22-fdf2-4295ff6b1cf0.htm" />
+  <HelpKINode Title="Clipboard_SetTextIfNotEmpty method" Url="html/b7fbfeae-3c62-9f55-9418-999175fdd09f.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut namespace" Url="html/bb2b9e8f-d2cb-8beb-9cea-81540da0a5b8.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.ExclusiveControlGroups(Of K) class" Url="html/c57b1469-9797-8fe7-372f-17ea9ae370cd.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.ExclusiveControlGroups&lt;K&gt; class" Url="html/c57b1469-9797-8fe7-372f-17ea9ae370cd.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.Pair(Of F, S) class" Url="html/e67bea51-337d-a90f-8174-361753d3a58b.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.Pair&lt;F, S&gt; class" Url="html/e67bea51-337d-a90f-8174-361753d3a58b.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.Twin(Of E) class" Url="html/b31afcf2-c8f5-5b95-610e-b1a345751610.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.Twin&lt;E&gt; class" Url="html/b31afcf2-c8f5-5b95-610e-b1a345751610.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.zu class" Url="html/6169d19c-b338-baa0-92ac-8c8d59a5c74c.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.zusp class" Url="html/79b857c8-14bc-dda8-b7cb-0e8578ee8b71.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.zuwf class" Url="html/7390e1cc-036d-52e3-de19-c93e1d7176b9.htm" />
+  <HelpKINode Title="currentGroup property" Url="html/dac19803-a598-713c-0d12-fa5ed395a28f.htm" />
+  <HelpKINode Title="ExclusiveControlGroups(Of K) class">
+    <HelpKINode Title="ExclusiveControlGroups(K) Class" Url="html/c57b1469-9797-8fe7-372f-17ea9ae370cd.htm" />
+    <HelpKINode Title="about ExclusiveControlGroups(Of K) class" Url="html/c57b1469-9797-8fe7-372f-17ea9ae370cd.htm" />
+    <HelpKINode Title="constructor" Url="html/b53f40ac-e15c-9fb5-a4bd-7b0a0b2dc1fb.htm" />
+    <HelpKINode Title="methods" Url="html/f75ce698-5e46-aba7-a69f-21619f7257e3.htm" />
+    <HelpKINode Title="properties" Url="html/3a32f443-a5ad-8e7b-2b2b-348b56cf06db.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ExclusiveControlGroups(Of K).addGroup method" Url="html/ded914b0-3f9e-605a-aa33-767f51693a21.htm" />
+  <HelpKINode Title="ExclusiveControlGroups(Of K).currentGroup property" Url="html/dac19803-a598-713c-0d12-fa5ed395a28f.htm" />
+  <HelpKINode Title="ExclusiveControlGroups(Of K).ExclusiveControlGroups constructor" Url="html/b53f40ac-e15c-9fb5-a4bd-7b0a0b2dc1fb.htm" />
+  <HelpKINode Title="ExclusiveControlGroups(Of K).switchOffAll method" Url="html/bd657d11-e837-a2e0-d8bb-79e99b289ab0.htm" />
+  <HelpKINode Title="ExclusiveControlGroups(Of K).switchTo method" Url="html/1060b902-8443-2349-66a2-0fcfac8e0f24.htm" />
+  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt; class">
+    <HelpKINode Title="ExclusiveControlGroups(K) Class" Url="html/c57b1469-9797-8fe7-372f-17ea9ae370cd.htm" />
+    <HelpKINode Title="about ExclusiveControlGroups&lt;K&gt; class" Url="html/c57b1469-9797-8fe7-372f-17ea9ae370cd.htm" />
+    <HelpKINode Title="constructor" Url="html/b53f40ac-e15c-9fb5-a4bd-7b0a0b2dc1fb.htm" />
+    <HelpKINode Title="methods" Url="html/f75ce698-5e46-aba7-a69f-21619f7257e3.htm" />
+    <HelpKINode Title="properties" Url="html/3a32f443-a5ad-8e7b-2b2b-348b56cf06db.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt;.addGroup method" Url="html/ded914b0-3f9e-605a-aa33-767f51693a21.htm" />
+  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt;.currentGroup property" Url="html/dac19803-a598-713c-0d12-fa5ed395a28f.htm" />
+  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt;.ExclusiveControlGroups constructor" Url="html/b53f40ac-e15c-9fb5-a4bd-7b0a0b2dc1fb.htm" />
+  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt;.switchOffAll method" Url="html/bd657d11-e837-a2e0-d8bb-79e99b289ab0.htm" />
+  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt;.switchTo method" Url="html/1060b902-8443-2349-66a2-0fcfac8e0f24.htm" />
+  <HelpKINode Title="First field" Url="html/a4c4df21-92f3-0f01-cc9d-289eeb848d7d.htm" />
+  <HelpKINode Title="Left method" Url="html/0e5b3021-54ae-b6b3-651a-45d7bb619af3.htm" />
+  <HelpKINode Title="ListBox_AddTextIfNotContained method" Url="html/f5470c4d-3b9a-9747-fe09-8c3c35dea871.htm" />
+  <HelpKINode Title="ListBox_ContainsItemWithText method" Url="html/2dd0290d-ac15-01f4-6282-b62d798f7801.htm" />
+  <HelpKINode Title="ListBox_GetSelectedItemText method" Url="html/8e9af7ff-f654-4ce4-c84e-d37229460a16.htm" />
+  <HelpKINode Title="ListBox_HaveItemSelected method" Url="html/7213314b-7476-5906-db24-38b0b8c03a53.htm" />
+  <HelpKINode Title="ListBox_RemoveAllSelectedItems method" Url="html/a6ffb46d-872d-e1d3-9c21-b0bf73e22cf8.htm" />
+  <HelpKINode Title="ListBox_SelectLast method" Url="html/75a3edbe-3ffe-5961-bb77-3781738695fe.htm" />
+  <HelpKINode Title="ListBox_UpdateItem method" Url="html/a42eb189-4938-918d-2fa6-fdd47785596b.htm" />
+  <HelpKINode Title="ListBox_UpdateSelectedItem method" Url="html/3a543329-450f-c28a-8aec-863d27919947.htm" />
+  <HelpKINode Title="ListDiff(Of T) method" Url="html/9f8bb483-f838-019e-1a98-084cb5c1bc93.htm" />
+  <HelpKINode Title="ListDiff&lt;T&gt; method" Url="html/9f8bb483-f838-019e-1a98-084cb5c1bc93.htm" />
+  <HelpKINode Title="ListView_AddTextIfNotContained method" Url="html/c52812a7-386f-4453-42be-92d40da3272c.htm" />
+  <HelpKINode Title="ListView_AdjustTileSizetoFirstItem method" Url="html/39fa6d21-ea96-9057-93fc-44780b1c7301.htm" />
+  <HelpKINode Title="ListView_ContainsItemWithText method" Url="html/d5abb016-8ea5-97b9-cf7c-1622a0fcc840.htm" />
+  <HelpKINode Title="ListView_GenerateStringofItems method" Url="html/8547a313-14f6-c217-9db2-60e83e14b600.htm" />
+  <HelpKINode Title="ListView_RemoveItemsWithSetofText method" Url="html/50728c16-08d1-d180-f630-e00114401d9d.htm" />
+  <HelpKINode Title="ListView_RemoveSelected method" Url="html/318463ac-5af4-b6bb-1327-03610628ea79.htm" />
+  <HelpKINode Title="openDirectory method" Url="html/4aafbfcf-56e9-071d-3cd9-71271445e385.htm" />
+  <HelpKINode Title="OtherIfNull(Of T) method" Url="html/ec025d62-8677-fd61-6dfb-f143093dcbf2.htm" />
+  <HelpKINode Title="OtherIfNull&lt;T&gt; method" Url="html/ec025d62-8677-fd61-6dfb-f143093dcbf2.htm" />
+  <HelpKINode Title="Pair(Of F, S) class">
+    <HelpKINode Title="Pair(F, S) Class" Url="html/e67bea51-337d-a90f-8174-361753d3a58b.htm" />
+    <HelpKINode Title="about Pair(Of F, S) class" Url="html/e67bea51-337d-a90f-8174-361753d3a58b.htm" />
+    <HelpKINode Title="constructor" Url="html/0604b4ed-abbc-ca02-f8f0-5546489014d3.htm" />
+    <HelpKINode Title="fields" Url="html/b8ed00e7-9c6c-c181-1a4e-05cc236346e8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Pair(Of F, S).First field" Url="html/a4c4df21-92f3-0f01-cc9d-289eeb848d7d.htm" />
+  <HelpKINode Title="Pair(Of F, S).Pair constructor" Url="html/0604b4ed-abbc-ca02-f8f0-5546489014d3.htm" />
+  <HelpKINode Title="Pair(Of F, S).Second field" Url="html/ad8547ca-416d-ef15-fb31-65247a861643.htm" />
+  <HelpKINode Title="Pair&lt;F, S&gt; class">
+    <HelpKINode Title="Pair(F, S) Class" Url="html/e67bea51-337d-a90f-8174-361753d3a58b.htm" />
+    <HelpKINode Title="about Pair&lt;F, S&gt; class" Url="html/e67bea51-337d-a90f-8174-361753d3a58b.htm" />
+    <HelpKINode Title="constructor" Url="html/0604b4ed-abbc-ca02-f8f0-5546489014d3.htm" />
+    <HelpKINode Title="fields" Url="html/b8ed00e7-9c6c-c181-1a4e-05cc236346e8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Pair&lt;F, S&gt;.First field" Url="html/a4c4df21-92f3-0f01-cc9d-289eeb848d7d.htm" />
+  <HelpKINode Title="Pair&lt;F, S&gt;.Pair constructor" Url="html/0604b4ed-abbc-ca02-f8f0-5546489014d3.htm" />
+  <HelpKINode Title="Pair&lt;F, S&gt;.Second field" Url="html/ad8547ca-416d-ef15-fb31-65247a861643.htm" />
+  <HelpKINode Title="Right method" Url="html/407647ff-b08a-e586-2248-441cb10c08eb.htm" />
+  <HelpKINode Title="Second field" Url="html/ad8547ca-416d-ef15-fb31-65247a861643.htm" />
+  <HelpKINode Title="Split method" Url="html/b10456c2-6952-e0e9-4fca-5f58b22587c5.htm" />
+  <HelpKINode Title="switchOffAll method" Url="html/bd657d11-e837-a2e0-d8bb-79e99b289ab0.htm" />
+  <HelpKINode Title="switchTo method" Url="html/1060b902-8443-2349-66a2-0fcfac8e0f24.htm" />
+  <HelpKINode Title="Twin(Of E) class">
+    <HelpKINode Title="Twin(E) Class" Url="html/b31afcf2-c8f5-5b95-610e-b1a345751610.htm" />
+    <HelpKINode Title="about Twin(Of E) class" Url="html/b31afcf2-c8f5-5b95-610e-b1a345751610.htm" />
+    <HelpKINode Title="constructor" Url="html/fec6a91a-2e8d-7471-f994-638adc8deb32.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Twin(Of E).Twin constructor" Url="html/fec6a91a-2e8d-7471-f994-638adc8deb32.htm" />
+  <HelpKINode Title="Twin&lt;E&gt; class">
+    <HelpKINode Title="Twin(E) Class" Url="html/b31afcf2-c8f5-5b95-610e-b1a345751610.htm" />
+    <HelpKINode Title="about Twin&lt;E&gt; class" Url="html/b31afcf2-c8f5-5b95-610e-b1a345751610.htm" />
+    <HelpKINode Title="constructor" Url="html/fec6a91a-2e8d-7471-f994-638adc8deb32.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Twin&lt;E&gt;.Twin constructor" Url="html/fec6a91a-2e8d-7471-f994-638adc8deb32.htm" />
+  <HelpKINode Title="zu class">
+    <HelpKINode Title="zu Class" Url="html/6169d19c-b338-baa0-92ac-8c8d59a5c74c.htm" />
+    <HelpKINode Title="about zu class" Url="html/6169d19c-b338-baa0-92ac-8c8d59a5c74c.htm" />
+    <HelpKINode Title="methods" Url="html/64ff3656-7d6c-1dbc-e050-439fe6853112.htm" />
+  </HelpKINode>
+  <HelpKINode Title="zu.ListDiff(Of T) method" Url="html/9f8bb483-f838-019e-1a98-084cb5c1bc93.htm" />
+  <HelpKINode Title="zu.ListDiff&lt;T&gt; method" Url="html/9f8bb483-f838-019e-1a98-084cb5c1bc93.htm" />
+  <HelpKINode Title="zu.openDirectory method" Url="html/4aafbfcf-56e9-071d-3cd9-71271445e385.htm" />
+  <HelpKINode Title="zu.OtherIfNull(Of T) method" Url="html/ec025d62-8677-fd61-6dfb-f143093dcbf2.htm" />
+  <HelpKINode Title="zu.OtherIfNull&lt;T&gt; method" Url="html/ec025d62-8677-fd61-6dfb-f143093dcbf2.htm" />
+  <HelpKINode Title="zusp class">
+    <HelpKINode Title="zusp Class" Url="html/79b857c8-14bc-dda8-b7cb-0e8578ee8b71.htm" />
+    <HelpKINode Title="about zusp class" Url="html/79b857c8-14bc-dda8-b7cb-0e8578ee8b71.htm" />
+    <HelpKINode Title="methods" Url="html/16485a85-b1b9-31bb-8b28-29c9497ff497.htm" />
+  </HelpKINode>
+  <HelpKINode Title="zusp.ChopHead method" Url="html/050038eb-a776-5b72-af70-5f092e202877.htm" />
+  <HelpKINode Title="zusp.ChopTail method" Url="html/fb6bdd59-031f-3f22-fdf2-4295ff6b1cf0.htm" />
+  <HelpKINode Title="zusp.Left method" Url="html/0e5b3021-54ae-b6b3-651a-45d7bb619af3.htm" />
+  <HelpKINode Title="zusp.Right method" Url="html/407647ff-b08a-e586-2248-441cb10c08eb.htm" />
+  <HelpKINode Title="zusp.Split method" Url="html/b10456c2-6952-e0e9-4fca-5f58b22587c5.htm" />
+  <HelpKINode Title="zuwf class">
+    <HelpKINode Title="zuwf Class" Url="html/7390e1cc-036d-52e3-de19-c93e1d7176b9.htm" />
+    <HelpKINode Title="about zuwf class" Url="html/7390e1cc-036d-52e3-de19-c93e1d7176b9.htm" />
+    <HelpKINode Title="methods" Url="html/3fe8059d-3a0a-7909-44ca-eec54c37c76a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="zuwf.Clipboard_SetTextIfNotEmpty method" Url="html/b7fbfeae-3c62-9f55-9418-999175fdd09f.htm" />
+  <HelpKINode Title="zuwf.ListBox_AddTextIfNotContained method" Url="html/f5470c4d-3b9a-9747-fe09-8c3c35dea871.htm" />
+  <HelpKINode Title="zuwf.ListBox_ContainsItemWithText method" Url="html/2dd0290d-ac15-01f4-6282-b62d798f7801.htm" />
+  <HelpKINode Title="zuwf.ListBox_GetSelectedItemText method" Url="html/8e9af7ff-f654-4ce4-c84e-d37229460a16.htm" />
+  <HelpKINode Title="zuwf.ListBox_HaveItemSelected method" Url="html/7213314b-7476-5906-db24-38b0b8c03a53.htm" />
+  <HelpKINode Title="zuwf.ListBox_RemoveAllSelectedItems method" Url="html/a6ffb46d-872d-e1d3-9c21-b0bf73e22cf8.htm" />
+  <HelpKINode Title="zuwf.ListBox_SelectLast method" Url="html/75a3edbe-3ffe-5961-bb77-3781738695fe.htm" />
+  <HelpKINode Title="zuwf.ListBox_UpdateItem method" Url="html/a42eb189-4938-918d-2fa6-fdd47785596b.htm" />
+  <HelpKINode Title="zuwf.ListBox_UpdateSelectedItem method" Url="html/3a543329-450f-c28a-8aec-863d27919947.htm" />
+  <HelpKINode Title="zuwf.ListView_AddTextIfNotContained method" Url="html/c52812a7-386f-4453-42be-92d40da3272c.htm" />
+  <HelpKINode Title="zuwf.ListView_AdjustTileSizetoFirstItem method" Url="html/39fa6d21-ea96-9057-93fc-44780b1c7301.htm" />
+  <HelpKINode Title="zuwf.ListView_ContainsItemWithText method" Url="html/d5abb016-8ea5-97b9-cf7c-1622a0fcc840.htm" />
+  <HelpKINode Title="zuwf.ListView_GenerateStringofItems method" Url="html/8547a313-14f6-c217-9db2-60e83e14b600.htm" />
+  <HelpKINode Title="zuwf.ListView_RemoveItemsWithSetofText method" Url="html/50728c16-08d1-d180-f630-e00114401d9d.htm" />
+  <HelpKINode Title="zuwf.ListView_RemoveSelected method" Url="html/318463ac-5af4-b6bb-1327-03610628ea79.htm" />
+</HelpKI>

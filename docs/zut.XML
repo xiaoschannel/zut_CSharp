@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>zut</name>
+    </assembly>
+    <members>
+        <member name="M:cn.zuoanqh.open.zut.ExclusiveControlGroups`1.switchTo(`0)">
+            <summary>
+            Set all controls in this group visible, all controls in other groups invisible
+            </summary>
+            <param name="key">The identifier for the group to set visible of.</param>
+        </member>
+        <member name="T:cn.zuoanqh.open.zut.Pair`2">
+            <summary>
+            A simple, functional pair object for storing ordered elements.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="V"></typeparam>
+        </member>
+        <member name="F:cn.zuoanqh.open.zut.SelectableFlowList.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:cn.zuoanqh.open.zut.SelectableFlowList.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:cn.zuoanqh.open.zut.SelectableFlowList.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:cn.zuoanqh.open.zut.zerr">
+            <summary>
+            zut class for easy-to-use debug statements and error handling
+            </summary>
+        </member>
+        <member name="M:cn.zuoanqh.open.zut.zerr.e(System.String)">
+            <summary>
+            print if ERRS is true
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:cn.zuoanqh.open.zut.zusp">
+            <summary>
+            Zuoanqh's Utility for String Processing
+            </summary>
+        </member>
+        <member name="M:cn.zuoanqh.open.zut.zusp.Left(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="s">The target string.</param>
+            <param name="n">The amount of charecters.</param>
+            <returns> The leftmost n charecters of s. If s is not long enough, the entire string is returned.</returns>
+        </member>
+        <member name="M:cn.zuoanqh.open.zut.zusp.Right(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="s">The target string.</param>
+            <param name="n">The amount of charecters.</param>
+            <returns> The leftmost n charecters of s. If s is not long enough, the entire string is returned.</returns>
+        </member>
+        <member name="M:cn.zuoanqh.open.zut.zusp.ChopHead(System.String,System.String)">
+            <summary>
+            Chop down the part of given string before the first occourance of given separator.
+            </summary>
+            <param name="s"></param>
+            <param name="Separator"></param>
+            <returns>A pair of strings in their origional order.</returns>
+        </member>
+        <member name="M:cn.zuoanqh.open.zut.zusp.ChopTail(System.String,System.String)">
+            <summary>
+            Chop down the part of given string before the last occourance of given separator.
+            </summary>
+            <param name="s"></param>
+            <param name="Separator"></param>
+            <returns>A pair of strings in their origional order.</returns>
+        </member>
+        <member name="T:cn.zuoanqh.open.zut.zu">
+            <summary>
+            zut class of general algorithms.
+            </summary>
+        </member>
+        <member name="M:cn.zuoanqh.open.zut.zu.ListDiff``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="before">the list before the change</param>
+            <param name="after">the list after the change</param>
+            <returns>a Tuple that first element is what's new, second element is what's deleted.</returns>
+        </member>
+        <member name="M:cn.zuoanqh.open.zut.zu.openDirectory(System.String)">
+            <summary>
+            Open the given directory if exists. If not, a debug error message will be printed.
+            </summary>
+            <param name="targetDirectory"></param>
+        </member>
+        <member name="T:cn.zuoanqh.open.zut.zuwf">
+            <summary>
+            zut class for Windows Form.
+            </summary>
+        </member>
+        <member name="M:cn.zuoanqh.open.zut.zuwf.ListView_RemoveSelected(System.Windows.Forms.ListView)">
+            <summary>
+            Remove all selected items in given ListView.
+            </summary>
+            <param name="v">ListView to remove item.</param>
+            <returns>Number of selected items.</returns>
+        </member>
+        <member name="M:cn.zuoanqh.open.zut.zuwf.ListView_ContainsItemWithText(System.Windows.Forms.ListView,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
