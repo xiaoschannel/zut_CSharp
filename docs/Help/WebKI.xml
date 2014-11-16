@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpKI>
   <HelpKINode Title="addGroup method" Url="html/ded914b0-3f9e-605a-aa33-767f51693a21.htm" />
-  <HelpKINode Title="ChopHead method" Url="html/050038eb-a776-5b72-af70-5f092e202877.htm" />
-  <HelpKINode Title="ChopTail method" Url="html/fb6bdd59-031f-3f22-fdf2-4295ff6b1cf0.htm" />
+  <HelpKINode Title="ChopLeft method" Url="html/313572f9-7c40-a4e6-93a8-9b45365f208c.htm" />
+  <HelpKINode Title="ChopRight method" Url="html/d5e3e03d-af63-77b5-5eea-cafe3b22d144.htm" />
   <HelpKINode Title="Clipboard_SetTextIfNotEmpty method" Url="html/b7fbfeae-3c62-9f55-9418-999175fdd09f.htm" />
   <HelpKINode Title="cn.zuoanqh.open.zut namespace" Url="html/bb2b9e8f-d2cb-8beb-9cea-81540da0a5b8.htm" />
   <HelpKINode Title="cn.zuoanqh.open.zut.ExclusiveControlGroups(Of K) class" Url="html/c57b1469-9797-8fe7-372f-17ea9ae370cd.htm" />
@@ -15,6 +15,10 @@
   <HelpKINode Title="cn.zuoanqh.open.zut.zusp class" Url="html/79b857c8-14bc-dda8-b7cb-0e8578ee8b71.htm" />
   <HelpKINode Title="cn.zuoanqh.open.zut.zuwf class" Url="html/7390e1cc-036d-52e3-de19-c93e1d7176b9.htm" />
   <HelpKINode Title="currentGroup property" Url="html/dac19803-a598-713c-0d12-fa5ed395a28f.htm" />
+  <HelpKINode Title="CutFirst method" Url="html/b9534aa3-3862-3f76-354a-820042da1574.htm" />
+  <HelpKINode Title="CutLast method" Url="html/873bf27c-d91f-28da-2b11-a166deb73859.htm" />
+  <HelpKINode Title="Drop method" Url="html/414be9b8-b6a6-0aa0-24d7-a503710711e4.htm" />
+  <HelpKINode Title="DropLast method" Url="html/cc901be0-d063-a3f0-9514-bf41355a1df0.htm" />
   <HelpKINode Title="ExclusiveControlGroups(Of K) class">
     <HelpKINode Title="ExclusiveControlGroups(K) Class" Url="html/c57b1469-9797-8fe7-372f-17ea9ae370cd.htm" />
     <HelpKINode Title="about ExclusiveControlGroups(Of K) class" Url="html/c57b1469-9797-8fe7-372f-17ea9ae370cd.htm" />
@@ -110,8 +114,12 @@
     <HelpKINode Title="about zusp class" Url="html/79b857c8-14bc-dda8-b7cb-0e8578ee8b71.htm" />
     <HelpKINode Title="methods" Url="html/16485a85-b1b9-31bb-8b28-29c9497ff497.htm" />
   </HelpKINode>
-  <HelpKINode Title="zusp.ChopHead method" Url="html/050038eb-a776-5b72-af70-5f092e202877.htm" />
-  <HelpKINode Title="zusp.ChopTail method" Url="html/fb6bdd59-031f-3f22-fdf2-4295ff6b1cf0.htm" />
+  <HelpKINode Title="zusp.ChopLeft method" Url="html/313572f9-7c40-a4e6-93a8-9b45365f208c.htm" />
+  <HelpKINode Title="zusp.ChopRight method" Url="html/d5e3e03d-af63-77b5-5eea-cafe3b22d144.htm" />
+  <HelpKINode Title="zusp.CutFirst method" Url="html/b9534aa3-3862-3f76-354a-820042da1574.htm" />
+  <HelpKINode Title="zusp.CutLast method" Url="html/873bf27c-d91f-28da-2b11-a166deb73859.htm" />
+  <HelpKINode Title="zusp.Drop method" Url="html/414be9b8-b6a6-0aa0-24d7-a503710711e4.htm" />
+  <HelpKINode Title="zusp.DropLast method" Url="html/cc901be0-d063-a3f0-9514-bf41355a1df0.htm" />
   <HelpKINode Title="zusp.Left method" Url="html/0e5b3021-54ae-b6b3-651a-45d7bb619af3.htm" />
   <HelpKINode Title="zusp.Right method" Url="html/407647ff-b08a-e586-2248-441cb10c08eb.htm" />
   <HelpKINode Title="zusp.Split method" Url="html/b10456c2-6952-e0e9-4fca-5f58b22587c5.htm" />
