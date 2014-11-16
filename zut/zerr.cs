@@ -63,6 +63,7 @@ namespace cn.zuoanqh.open.zut
     /// Print given words with spaces in between.
     /// </summary>
     /// <param name="words"></param>
+    [Obsolete]
     public static void pw(params string[] words)
     {
       foreach (string s in words)

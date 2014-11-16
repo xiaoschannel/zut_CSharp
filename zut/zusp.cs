@@ -45,7 +45,8 @@ namespace cn.zuoanqh.open.zut
     /// <returns>The remaining charecters. Empty if given string is not long enough.</returns>
     public static string Drop(string s, int n)
     {
-      return "";
+      if (s.Length <= n) return "";
+      return s.Substring(n);
     }
     /// <summary>
     /// Remove the last n charecters from the given string. 
@@ -55,7 +56,8 @@ namespace cn.zuoanqh.open.zut
     /// <returns>The remaining charecters. Empty if given string is not long enough.</returns>
     public static string DropLast(string s, int n)
     {
-      return "";
+      if (s.Length <= n) return "";
+      return s.Substring(0,s.Length-n);
     }
 
     /// <summary>
