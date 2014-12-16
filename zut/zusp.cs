@@ -57,7 +57,7 @@ namespace cn.zuoanqh.open.zut
     public static string DropLast(string s, int n)
     {
       if (s.Length <= n) return "";
-      return s.Substring(0,s.Length-n);
+      return s.Substring(0, s.Length - n);
     }
 
     /// <summary>
@@ -69,7 +69,7 @@ namespace cn.zuoanqh.open.zut
     /// <returns>The two parts. The entire string then empty string if given string is not long enough.</returns>
     public static Twin<string> ChopLeft(string s, int n)
     {
-      return null;
+      return new Twin<string>(Left(s, n), Drop(s, n));
     }
     /// <summary>
     /// Chop the given string into two part, where the first part have n charecters.
@@ -80,7 +80,7 @@ namespace cn.zuoanqh.open.zut
     /// <returns>The two parts. Empty string then the entire string if given string is not long enough.</returns>
     public static Twin<string> ChopRight(string s, int n)
     {
-      return null;
+      return new Twin<string>(DropLast(s, n), Right(s, n));
     }
 
     /// <summary>

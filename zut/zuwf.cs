@@ -175,6 +175,17 @@ namespace cn.zuoanqh.open.zut
     {
       return l.SelectedItems.Count > 0;
     }
+
+    public static string ListBox_MkString(ListBox l, char delim)
+    {
+      if (l.Items.Count == 0) return "";
+      string ans = "";
+      foreach(var v in l.Items)
+      {
+        ans += v.ToString()+delim+' ';
+      }
+      return zusp.ChopRight(ans, 2).First;
+    }
     /// <summary>
     /// Avoids setting text to clipboard if given string does not have actual charecters.
     /// </summary>
