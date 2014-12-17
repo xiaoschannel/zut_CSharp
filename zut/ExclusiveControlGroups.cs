@@ -68,7 +68,15 @@ namespace cn.zuoanqh.open.zut
           c.Visible = false;
       currentGroup = default(K);
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    public ISet<Control> getCurrentGroup()
+    {
+      return (currentGroup.Equals(default(K))) ? null : groups[currentGroup];
+    }
 
-
+    
   }
 }

@@ -65,5 +65,25 @@ namespace cn.zuoanqh.open.zut
     //  return (condition)?result:null;
     //}
 
+    /// <summary>
+    /// Invoke the action if value given is not null.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="action"></param>
+    /// <param name="value"></param>
+    public static void DoIfNotNull<T>(Action<T> action, T value)
+    {
+      if (value != null) action.Invoke(value);
+    }
+    /// <summary>
+    /// Invoke the action on all targets.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="action"></param>
+    /// <param name="targets"></param>
+    public static void DoToAll<T>(Action<T> action, params T[] targets)
+    {
+      foreach (T t in targets) action.Invoke(t);
+    }
   }
 }
