@@ -9,14 +9,16 @@ using System.Threading.Tasks;
 namespace cn.zuoanqh.open.zut
 {
   /// <summary>
-  /// zut class of general algorithms.
+  /// Zuoanqh's Utility class of general algorithms. It's named "zu" because zut.zut is weird.
+  /// Note it is intended for the name to be in lowercase, since it's easier to type in only lowercase. 
+  /// These are shorthands that dosen't have fancy OOP purpouses really.
   /// </summary>
   public static class zu
   {
     /// <summary>
     /// 
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">The type of lists</typeparam>
     /// <param name="before">the list before the change</param>
     /// <param name="after">the list after the change</param>
     /// <returns>a Tuple that first element is what's new, second element is what's deleted.</returns>
@@ -75,6 +77,7 @@ namespace cn.zuoanqh.open.zut
     {
       if (value != null) action.Invoke(value);
     }
+
     /// <summary>
     /// Invoke the action on all targets.
     /// </summary>

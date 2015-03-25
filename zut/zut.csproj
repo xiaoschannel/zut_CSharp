@@ -43,10 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExclusiveControlGroups.cs" />
-    <Compile Include="Pair.cs" />
+    <Compile Include="FileIO\Text\ByLineFileIO.cs" />
+    <Compile Include="FileIO\Text\DictionaryFileIO.cs" />
+    <Compile Include="Processing\Procedure.cs" />
+    <Compile Include="Winform\ExclusiveControlGroups.cs" />
+    <Compile Include="Data\Pair.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Twin.cs" />
+    <Compile Include="Data\Twin.cs" />
     <Compile Include="zerr.cs" />
     <Compile Include="zusp.cs" />
     <Compile Include="zu.cs" />
@@ -54,6 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FileIO\Binary\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

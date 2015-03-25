@@ -1,68 +1,145 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="02e14712-b958-4ca8-a3bb-27f6ae1009b8" Title="cn.zuoanqh.open.zut" Url="html/bb2b9e8f-d2cb-8beb-9cea-81540da0a5b8.htm">
-    <HelpTOCNode Id="f9e2e5a6-4591-46bd-bc51-be01a521752b" Title="ExclusiveControlGroups(K) Class" Url="html/c57b1469-9797-8fe7-372f-17ea9ae370cd.htm">
-      <HelpTOCNode Title="ExclusiveControlGroups(K) Constructor " Url="html/b53f40ac-e15c-9fb5-a4bd-7b0a0b2dc1fb.htm" />
-      <HelpTOCNode Id="76982b1f-5a71-4e41-922e-07a12c125316" Title="ExclusiveControlGroups(K) Methods" Url="html/f75ce698-5e46-aba7-a69f-21619f7257e3.htm">
-        <HelpTOCNode Title="addGroup Method " Url="html/ded914b0-3f9e-605a-aa33-767f51693a21.htm" />
-        <HelpTOCNode Title="switchOffAll Method " Url="html/bd657d11-e837-a2e0-d8bb-79e99b289ab0.htm" />
-        <HelpTOCNode Title="switchTo Method " Url="html/1060b902-8443-2349-66a2-0fcfac8e0f24.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="812cf2d1-5b2e-4cae-bf87-27fefbbdc89e" Title="ExclusiveControlGroups(K) Properties" Url="html/3a32f443-a5ad-8e7b-2b2b-348b56cf06db.htm">
-        <HelpTOCNode Title="currentGroup Property " Url="html/dac19803-a598-713c-0d12-fa5ed395a28f.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="5f9828a3-6161-4756-829d-de749b9778fb" Title="Pair(F, S) Class" Url="html/e67bea51-337d-a90f-8174-361753d3a58b.htm">
-      <HelpTOCNode Title="Pair(F, S) Constructor " Url="html/0604b4ed-abbc-ca02-f8f0-5546489014d3.htm" />
-      <HelpTOCNode Id="955c7efa-3c23-4753-9bc8-a7acd65eca4c" Title="Pair(F, S) Fields" Url="html/b8ed00e7-9c6c-c181-1a4e-05cc236346e8.htm">
-        <HelpTOCNode Title="First Field" Url="html/a4c4df21-92f3-0f01-cc9d-289eeb848d7d.htm" />
-        <HelpTOCNode Title="Second Field" Url="html/ad8547ca-416d-ef15-fb31-65247a861643.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="bdc06fb4-cddc-4cdc-bc54-58501637dd62" Title="Twin(E) Class" Url="html/b31afcf2-c8f5-5b95-610e-b1a345751610.htm">
-      <HelpTOCNode Title="Twin(E) Constructor " Url="html/fec6a91a-2e8d-7471-f994-638adc8deb32.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Id="69e5bf3c-6592-472c-9719-4015ea0be57c" Title="zu Class" Url="html/6169d19c-b338-baa0-92ac-8c8d59a5c74c.htm">
-      <HelpTOCNode Id="7357a2ce-c10e-4ac6-b163-34d0915f4869" Title="zu Methods" Url="html/64ff3656-7d6c-1dbc-e050-439fe6853112.htm">
-        <HelpTOCNode Title="ListDiff(T) Method " Url="html/9f8bb483-f838-019e-1a98-084cb5c1bc93.htm" />
-        <HelpTOCNode Title="openDirectory Method " Url="html/4aafbfcf-56e9-071d-3cd9-71271445e385.htm" />
-        <HelpTOCNode Title="OtherIfNull(T) Method " Url="html/ec025d62-8677-fd61-6dfb-f143093dcbf2.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="3a627605-a705-47fd-94f1-7cbfe62cb374" Title="zusp Class" Url="html/79b857c8-14bc-dda8-b7cb-0e8578ee8b71.htm">
-      <HelpTOCNode Id="01692caa-4a8a-494c-9950-f3defa79e069" Title="zusp Methods" Url="html/16485a85-b1b9-31bb-8b28-29c9497ff497.htm">
-        <HelpTOCNode Title="ChopLeft Method " Url="html/313572f9-7c40-a4e6-93a8-9b45365f208c.htm" />
-        <HelpTOCNode Title="ChopRight Method " Url="html/d5e3e03d-af63-77b5-5eea-cafe3b22d144.htm" />
-        <HelpTOCNode Title="CutFirst Method " Url="html/b9534aa3-3862-3f76-354a-820042da1574.htm" />
-        <HelpTOCNode Title="CutLast Method " Url="html/873bf27c-d91f-28da-2b11-a166deb73859.htm" />
-        <HelpTOCNode Title="Drop Method " Url="html/414be9b8-b6a6-0aa0-24d7-a503710711e4.htm" />
-        <HelpTOCNode Title="DropLast Method " Url="html/cc901be0-d063-a3f0-9514-bf41355a1df0.htm" />
-        <HelpTOCNode Title="Left Method " Url="html/0e5b3021-54ae-b6b3-651a-45d7bb619af3.htm" />
-        <HelpTOCNode Title="Right Method " Url="html/407647ff-b08a-e586-2248-441cb10c08eb.htm" />
-        <HelpTOCNode Title="Split Method " Url="html/b10456c2-6952-e0e9-4fca-5f58b22587c5.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="ec40e5c5-536e-46ff-ad39-e674769d89b4" Title="zuwf Class" Url="html/7390e1cc-036d-52e3-de19-c93e1d7176b9.htm">
-      <HelpTOCNode Id="b497fc5b-efcc-4504-963a-4e5fd5d52934" Title="zuwf Methods" Url="html/3fe8059d-3a0a-7909-44ca-eec54c37c76a.htm">
-        <HelpTOCNode Title="Clipboard_SetTextIfNotEmpty Method " Url="html/b7fbfeae-3c62-9f55-9418-999175fdd09f.htm" />
-        <HelpTOCNode Title="ListBox_AddTextIfNotContained Method " Url="html/f5470c4d-3b9a-9747-fe09-8c3c35dea871.htm" />
-        <HelpTOCNode Title="ListBox_ContainsItemWithText Method " Url="html/2dd0290d-ac15-01f4-6282-b62d798f7801.htm" />
-        <HelpTOCNode Title="ListBox_GetSelectedItemText Method " Url="html/8e9af7ff-f654-4ce4-c84e-d37229460a16.htm" />
-        <HelpTOCNode Title="ListBox_HaveItemSelected Method " Url="html/7213314b-7476-5906-db24-38b0b8c03a53.htm" />
-        <HelpTOCNode Id="f1873f01-41a7-441f-af5c-a8b6e86f163a" Title="ListBox_RemoveAllSelectedItems Method " Url="html/a6ffb46d-872d-e1d3-9c21-b0bf73e22cf8.htm">
-          <HelpTOCNode Title="ListBox_RemoveAllSelectedItems Method (ListBox)" Url="html/619da397-9df5-3abd-a116-61fabca38e86.htm" />
-          <HelpTOCNode Title="ListBox_RemoveAllSelectedItems Method (ListBox, Action(Object))" Url="html/41716de9-93f7-935e-bd17-b8648d51f556.htm" />
+  <HelpTOCNode Id="f4ed3b11-ce4e-42ca-a7f7-e93b6022f4ac" Title="Namespaces" Url="html/d75eb659-6335-53f6-af7a-81814a21ab7f.htm">
+    <HelpTOCNode Id="dd6b516d-7460-483c-a237-0664e27af7f5" Title="cn.zuoanqh.open.zut" Url="html/bb2b9e8f-d2cb-8beb-9cea-81540da0a5b8.htm">
+      <HelpTOCNode Id="06c7c1d6-848d-4d70-9258-458b987179f9" Title="zerr Class" Url="html/6b3c5b91-1c3b-5455-764e-3354c0b63603.htm">
+        <HelpTOCNode Title="zerr Constructor " Url="html/c50ca37e-760e-28da-da19-c720864b4793.htm" />
+        <HelpTOCNode Id="51e088d7-1ad3-4488-b7e9-4dbd4336ec80" Title="zerr Fields" Url="html/806172e5-1229-456e-3302-6d5aa8857d09.htm">
+          <HelpTOCNode Title="DEBUG Field" Url="html/ee11b5ae-e859-bd12-33e7-861e192f98bc.htm" />
+          <HelpTOCNode Title="ERRS Field" Url="html/a811cce2-a912-4e04-a275-d3fb3fcda74b.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Title="ListBox_SelectLast Method " Url="html/75a3edbe-3ffe-5961-bb77-3781738695fe.htm" />
-        <HelpTOCNode Title="ListBox_UpdateItem Method " Url="html/a42eb189-4938-918d-2fa6-fdd47785596b.htm" />
-        <HelpTOCNode Title="ListBox_UpdateSelectedItem Method " Url="html/3a543329-450f-c28a-8aec-863d27919947.htm" />
-        <HelpTOCNode Title="ListView_AddTextIfNotContained Method " Url="html/c52812a7-386f-4453-42be-92d40da3272c.htm" />
-        <HelpTOCNode Title="ListView_AdjustTileSizetoFirstItem Method " Url="html/39fa6d21-ea96-9057-93fc-44780b1c7301.htm" />
-        <HelpTOCNode Title="ListView_ContainsItemWithText Method " Url="html/d5abb016-8ea5-97b9-cf7c-1622a0fcc840.htm" />
-        <HelpTOCNode Title="ListView_GenerateStringofItems Method " Url="html/8547a313-14f6-c217-9db2-60e83e14b600.htm" />
-        <HelpTOCNode Title="ListView_RemoveItemsWithSetofText Method " Url="html/50728c16-08d1-d180-f630-e00114401d9d.htm" />
-        <HelpTOCNode Title="ListView_RemoveSelected Method " Url="html/318463ac-5af4-b6bb-1327-03610628ea79.htm" />
+        <HelpTOCNode Id="050a15ea-30cb-4686-b40a-be034d683d2f" Title="zerr Methods" Url="html/12453bfb-f3ae-a336-76d3-cbdcab7b675e.htm">
+          <HelpTOCNode Id="5f507bff-b66a-45e1-b0d9-f607d8e49715" Title="d Method " Url="html/8b2406f8-7c2c-f1e9-f278-bc92b2ea3d0e.htm">
+            <HelpTOCNode Title="d Method (String)" Url="html/4daa4ae1-d7cf-1218-b3e0-6e106dad121e.htm" />
+            <HelpTOCNode Title="d Method (String, String)" Url="html/8456334d-2dd0-cf1f-86dc-9f1f3ed0dcb7.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="4408bd0f-e2bb-4492-8463-028f825703a1" Title="e Method " Url="html/6bc5c0a0-563f-0863-8fa8-304b4b1a4540.htm">
+            <HelpTOCNode Title="e Method (String)" Url="html/9c9a7dd3-74d3-b103-ee3c-9622ce54455c.htm" />
+            <HelpTOCNode Title="e Method (String, String)" Url="html/67f1ca8b-e869-0716-0388-0f35681bc253.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="pw Method " Url="html/b85fede8-3d1e-26bd-7004-dc4491cd0b11.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="38336197-9b40-49c9-bdbe-caa7cc3bb369" Title="zu Class" Url="html/6169d19c-b338-baa0-92ac-8c8d59a5c74c.htm">
+        <HelpTOCNode Id="a329adfa-f5a3-4051-b247-f1fd31a6ad0d" Title="zu Methods" Url="html/64ff3656-7d6c-1dbc-e050-439fe6853112.htm">
+          <HelpTOCNode Title="DoIfNotNull(T) Method " Url="html/10afa15f-6982-b784-af18-95ae32085026.htm" />
+          <HelpTOCNode Title="DoToAll(T) Method " Url="html/e417d4ea-1ada-dbd3-131f-d0fec577f54f.htm" />
+          <HelpTOCNode Title="ListDiff(T) Method " Url="html/9f8bb483-f838-019e-1a98-084cb5c1bc93.htm" />
+          <HelpTOCNode Title="openDirectory Method " Url="html/4aafbfcf-56e9-071d-3cd9-71271445e385.htm" />
+          <HelpTOCNode Title="OtherIfNull(T) Method " Url="html/ec025d62-8677-fd61-6dfb-f143093dcbf2.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="4bf7cbb0-40e8-47bf-a1e6-4f94b7037f2a" Title="zusp Class" Url="html/79b857c8-14bc-dda8-b7cb-0e8578ee8b71.htm">
+        <HelpTOCNode Id="694e4ef9-86fb-4d9f-b46b-0d258827011b" Title="zusp Methods" Url="html/16485a85-b1b9-31bb-8b28-29c9497ff497.htm">
+          <HelpTOCNode Title="ChopLeft Method " Url="html/313572f9-7c40-a4e6-93a8-9b45365f208c.htm" />
+          <HelpTOCNode Title="ChopRight Method " Url="html/d5e3e03d-af63-77b5-5eea-cafe3b22d144.htm" />
+          <HelpTOCNode Title="CutFirst Method " Url="html/b9534aa3-3862-3f76-354a-820042da1574.htm" />
+          <HelpTOCNode Title="CutLast Method " Url="html/873bf27c-d91f-28da-2b11-a166deb73859.htm" />
+          <HelpTOCNode Title="Drop Method " Url="html/414be9b8-b6a6-0aa0-24d7-a503710711e4.htm" />
+          <HelpTOCNode Title="DropLast Method " Url="html/cc901be0-d063-a3f0-9514-bf41355a1df0.htm" />
+          <HelpTOCNode Title="Left Method " Url="html/0e5b3021-54ae-b6b3-651a-45d7bb619af3.htm" />
+          <HelpTOCNode Title="Right Method " Url="html/407647ff-b08a-e586-2248-441cb10c08eb.htm" />
+          <HelpTOCNode Title="Split Method " Url="html/b10456c2-6952-e0e9-4fca-5f58b22587c5.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="a8874526-72bf-42d6-8d7f-fe13c3b44db3" Title="zuwf Class" Url="html/7390e1cc-036d-52e3-de19-c93e1d7176b9.htm">
+        <HelpTOCNode Id="30d571ff-26be-41d2-a5bf-914a9b14d379" Title="zuwf Methods" Url="html/3fe8059d-3a0a-7909-44ca-eec54c37c76a.htm">
+          <HelpTOCNode Title="Clipboard_SetTextIfNotEmpty Method " Url="html/b7fbfeae-3c62-9f55-9418-999175fdd09f.htm" />
+          <HelpTOCNode Title="ListBox_AddTextIfNotContained Method " Url="html/f5470c4d-3b9a-9747-fe09-8c3c35dea871.htm" />
+          <HelpTOCNode Title="ListBox_ContainsItemWithText Method " Url="html/2dd0290d-ac15-01f4-6282-b62d798f7801.htm" />
+          <HelpTOCNode Title="ListBox_GetSelectedItemText Method " Url="html/8e9af7ff-f654-4ce4-c84e-d37229460a16.htm" />
+          <HelpTOCNode Title="ListBox_HaveItemSelected Method " Url="html/7213314b-7476-5906-db24-38b0b8c03a53.htm" />
+          <HelpTOCNode Title="ListBox_MkString Method " Url="html/5a8c5693-7962-b736-00ee-009b039a6c1a.htm" />
+          <HelpTOCNode Id="67f5fe90-e1f2-4603-9bf8-f8469ec2cf9e" Title="ListBox_RemoveAllSelectedItems Method " Url="html/a6ffb46d-872d-e1d3-9c21-b0bf73e22cf8.htm">
+            <HelpTOCNode Title="ListBox_RemoveAllSelectedItems Method (ListBox)" Url="html/619da397-9df5-3abd-a116-61fabca38e86.htm" />
+            <HelpTOCNode Title="ListBox_RemoveAllSelectedItems Method (ListBox, Action(Object))" Url="html/41716de9-93f7-935e-bd17-b8648d51f556.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="ListBox_SelectLast Method " Url="html/75a3edbe-3ffe-5961-bb77-3781738695fe.htm" />
+          <HelpTOCNode Title="ListBox_UpdateItem Method " Url="html/a42eb189-4938-918d-2fa6-fdd47785596b.htm" />
+          <HelpTOCNode Title="ListBox_UpdateSelectedItem Method " Url="html/3a543329-450f-c28a-8aec-863d27919947.htm" />
+          <HelpTOCNode Title="ListView_AddTextIfNotContained Method " Url="html/c52812a7-386f-4453-42be-92d40da3272c.htm" />
+          <HelpTOCNode Title="ListView_AdjustTileSizetoFirstItem Method " Url="html/39fa6d21-ea96-9057-93fc-44780b1c7301.htm" />
+          <HelpTOCNode Title="ListView_ContainsItemWithText Method " Url="html/d5abb016-8ea5-97b9-cf7c-1622a0fcc840.htm" />
+          <HelpTOCNode Title="ListView_GenerateStringofItems Method " Url="html/8547a313-14f6-c217-9db2-60e83e14b600.htm" />
+          <HelpTOCNode Title="ListView_RemoveItemsWithSetofText Method " Url="html/50728c16-08d1-d180-f630-e00114401d9d.htm" />
+          <HelpTOCNode Title="ListView_RemoveSelected Method " Url="html/318463ac-5af4-b6bb-1327-03610628ea79.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0bb1023d-fcd3-46a3-b042-4f83c55da684" Title="cn.zuoanqh.open.zut.Data" Url="html/3fb529b4-4c39-8d0e-91f4-4d5eb29d7d00.htm">
+      <HelpTOCNode Id="d545db2a-9df3-4171-ada8-52a394b203e5" Title="Pair(F, S) Class" Url="html/be855e10-daba-3548-6c7e-6f20397179fd.htm">
+        <HelpTOCNode Title="Pair(F, S) Constructor " Url="html/8daf4fa7-87ed-36b3-559e-e02eaa94d3bd.htm" />
+        <HelpTOCNode Id="82660c64-1bd1-47d1-92fb-0ae40ffa6aa3" Title="Pair(F, S) Fields" Url="html/86a11a7d-5b15-c5e8-92f7-b15e1bc05750.htm">
+          <HelpTOCNode Title="First Field" Url="html/b9258c36-e6e2-60a0-25ba-59ab80432a38.htm" />
+          <HelpTOCNode Title="Second Field" Url="html/8cfa2da5-ecd0-cf90-d866-8c7d1eeae42f.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="65a42f1d-2882-49c7-89c3-5e6f517d1c98" Title="Twin(E) Class" Url="html/548d494b-ed0a-0063-6593-8985149788a9.htm">
+        <HelpTOCNode Title="Twin(E) Constructor " Url="html/978a8a3d-fa6d-af36-b9e7-dfcee31dcda3.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d4787869-c7d0-47eb-a95d-3d9e1a5cae86" Title="cn.zuoanqh.open.zut.FileIO.Text" Url="html/80d13c28-9fde-1ca4-4b67-abc6936a73aa.htm">
+      <HelpTOCNode Id="ed4a7191-2da1-4e9a-8000-a078689caa44" Title="ByLineFileIO Class" Url="html/3c892fda-9ce9-8142-086a-224a9deec205.htm">
+        <HelpTOCNode Title="ByLineFileIO Constructor " Url="html/2f252604-ffc9-b248-2545-b4619b619d4c.htm" />
+        <HelpTOCNode Id="ebc989f2-eea9-4c56-9caf-eaff1af864c3" Title="ByLineFileIO Methods" Url="html/939fd71a-56df-a4a6-3869-f1e2b7f56cf3.htm">
+          <HelpTOCNode Title="readFile Method " Url="html/a3ddf698-6bc8-e751-c32f-3f54038e062d.htm" />
+          <HelpTOCNode Id="b14eaf91-ddfa-4da4-a023-d12aea868cd7" Title="readFileNoWhitespace Method " Url="html/c312bca4-7388-33cb-409b-57d5c34e3979.htm">
+            <HelpTOCNode Title="readFileNoWhitespace Method (String)" Url="html/61441223-fdd5-c21b-8400-0b8a018df866.htm" />
+            <HelpTOCNode Title="readFileNoWhitespace Method (String, String)" Url="html/5496e4e9-6bb2-a466-5a40-681644fb361a.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f65b8bfc-ca21-4598-98e9-7aa504af24ae" Title="readFileVerbatim Method " Url="html/300b19ce-097f-8c8e-149c-2a215464d954.htm">
+            <HelpTOCNode Title="readFileVerbatim Method (String)" Url="html/a86c3e40-ebcb-1a8c-bfeb-610adb7a6757.htm" />
+            <HelpTOCNode Title="readFileVerbatim Method (String, String)" Url="html/2a1c0446-7223-37aa-6a32-c709e41f15b7.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f0548be4-de6a-4e86-b904-1547276bddb3" Title="writeFile Method " Url="html/d82b7f0a-79cf-839a-3ab0-c47abfb44835.htm">
+            <HelpTOCNode Title="writeFile Method (List(String), String)" Url="html/1de7f0dd-d372-90c1-11de-05a65c160f4f.htm" />
+            <HelpTOCNode Title="writeFile Method (List(String), String, String)" Url="html/058b8a4c-47ca-7c11-e6f4-b1374b3f35f7.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="0cc1aa3d-2b19-4581-b027-5a70beeb25e2" Title="DictionaryFileIO Class" Url="html/f6f2f77a-b33b-efb3-5101-64596932c920.htm">
+        <HelpTOCNode Title="DictionaryFileIO Constructor " Url="html/c87b6d87-70b6-234f-5390-fa5de62bbcbf.htm" />
+        <HelpTOCNode Id="7d187014-d2da-4a62-9962-413b56fb9092" Title="DictionaryFileIO Methods" Url="html/d9489c06-74b3-cf8b-19bd-07d9ff41ba03.htm">
+          <HelpTOCNode Id="9842e227-1c34-4dce-bd81-dedec5158cd6" Title="peekFile Method " Url="html/6dc09a5c-761a-7d82-85b7-4d407f1ae2f6.htm">
+            <HelpTOCNode Title="peekFile Method (String)" Url="html/0bedd41c-3430-b9b8-42e7-bdcea4b954cf.htm" />
+            <HelpTOCNode Title="peekFile Method (String, String)" Url="html/5ec20bc5-0cd0-cace-d4d3-f6eb65d3e5c7.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="421c9523-5d44-40d3-8765-94e3b1b0076c" Title="readFile Method " Url="html/603baec1-f509-b651-3ee7-edb7eb22df3a.htm">
+            <HelpTOCNode Title="readFile Method (String, String)" Url="html/0a4ce8ab-51c8-64c0-4dd3-e9f77f4b465a.htm" />
+            <HelpTOCNode Title="readFile Method (String, String, String)" Url="html/5072fde8-dc1d-3d1d-dff8-4583e14a8281.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="9f424d03-d04a-4daf-b8a5-95553296f8f1" Title="writeFile Method " Url="html/21e32842-5707-7c0b-7153-ca42404ba9e5.htm">
+            <HelpTOCNode Title="writeFile Method (List(KeyValuePair(String, String)), String, String)" Url="html/55d02732-7d42-10df-d6a0-f9b78e05a89c.htm" />
+            <HelpTOCNode Title="writeFile Method (List(KeyValuePair(String, String)), String, String, String)" Url="html/32bf26f0-34ce-cafe-3397-a0726ba55d51.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="2c80a092-a8a4-4b2c-a69d-73983b80d2ae" Title="cn.zuoanqh.open.zut.Processing" Url="html/8cd4c080-7ba0-b09e-4126-eda2315d3e17.htm">
+      <HelpTOCNode Id="15028462-5f14-496a-a8db-81a143ea513a" Title="Procedure(I, O) Class" Url="html/7db33304-f26c-df11-d5a0-1296c0574fe4.htm">
+        <HelpTOCNode Title="Procedure(I, O) Constructor " Url="html/9d9713c5-c391-f754-fa6e-f6e940eece0f.htm" />
+        <HelpTOCNode Id="c0ddc2d7-91ec-4d61-8a9f-241e18657c0a" Title="Procedure(I, O) Fields" Url="html/c8730b87-5f4a-34c2-6c64-b612cd59a822.htm">
+          <HelpTOCNode Title="func Field" Url="html/aa24a836-c067-0b5f-e80d-08ae77bae545.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="5c06160c-fbef-47ea-ab73-b3e22b8ab7e7" Title="Procedure(I, O) Methods" Url="html/1a43642a-80cd-900e-1af6-460f4d3dbaba.htm">
+          <HelpTOCNode Title="Process Method " Url="html/5a5bb737-bef7-30b6-f6ad-c7a8688593a4.htm" />
+          <HelpTOCNode Title="then(N) Method " Url="html/ce878d71-8c0b-7177-a610-7af45f4fff50.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="baced3f3-6b04-4d93-9e2d-887c51473302" Title="cn.zuoanqh.open.zut.Winform" Url="html/ec606173-c064-d36c-dc9b-d11786dff27a.htm">
+      <HelpTOCNode Id="9a271875-03ab-41f5-a83e-61181c753ce3" Title="ExclusiveControlGroups(K) Class" Url="html/3158087d-c65a-2537-d081-012547880dfa.htm">
+        <HelpTOCNode Title="ExclusiveControlGroups(K) Constructor " Url="html/37a2912f-f78f-cf69-9bc1-d783084670f6.htm" />
+        <HelpTOCNode Id="9082efde-cb65-4dca-840a-c093caf3b9e5" Title="ExclusiveControlGroups(K) Methods" Url="html/207c1168-d67d-da68-a0bb-072650d4c3d7.htm">
+          <HelpTOCNode Title="addGroup Method " Url="html/2f6c5644-0399-7668-577e-d63fe247e304.htm" />
+          <HelpTOCNode Title="getCurrentGroup Method " Url="html/ae3e8c71-189d-274e-b77c-717a426f4b4f.htm" />
+          <HelpTOCNode Title="switchOffAll Method " Url="html/65ba4b00-177a-7aa9-a4e9-649f352bddd0.htm" />
+          <HelpTOCNode Title="switchTo Method " Url="html/8bcbe54e-42d4-9d60-2b3e-40e9036ab902.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="e2721864-e7e5-4ce0-a0bc-a01417fbb039" Title="ExclusiveControlGroups(K) Properties" Url="html/4b223f54-0ca8-cc07-c830-dfc6a78ddc4f.htm">
+          <HelpTOCNode Title="currentGroup Property " Url="html/d2ccc0ff-5d1b-e010-4212-aaf8e3fdbf31.htm" />
+        </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>

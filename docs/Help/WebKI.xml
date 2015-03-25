@@ -1,54 +1,97 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpKI>
-  <HelpKINode Title="addGroup method" Url="html/ded914b0-3f9e-605a-aa33-767f51693a21.htm" />
+  <HelpKINode Title="addGroup method" Url="html/2f6c5644-0399-7668-577e-d63fe247e304.htm" />
+  <HelpKINode Title="ByLineFileIO class">
+    <HelpKINode Title="ByLineFileIO Class" Url="html/3c892fda-9ce9-8142-086a-224a9deec205.htm" />
+    <HelpKINode Title="about ByLineFileIO class" Url="html/3c892fda-9ce9-8142-086a-224a9deec205.htm" />
+    <HelpKINode Title="constructor" Url="html/2f252604-ffc9-b248-2545-b4619b619d4c.htm" />
+    <HelpKINode Title="methods" Url="html/939fd71a-56df-a4a6-3869-f1e2b7f56cf3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ByLineFileIO.ByLineFileIO constructor" Url="html/2f252604-ffc9-b248-2545-b4619b619d4c.htm" />
+  <HelpKINode Title="ByLineFileIO.readFile method" Url="html/a3ddf698-6bc8-e751-c32f-3f54038e062d.htm" />
+  <HelpKINode Title="ByLineFileIO.readFileNoWhitespace method" Url="html/c312bca4-7388-33cb-409b-57d5c34e3979.htm" />
+  <HelpKINode Title="ByLineFileIO.readFileVerbatim method" Url="html/300b19ce-097f-8c8e-149c-2a215464d954.htm" />
+  <HelpKINode Title="ByLineFileIO.writeFile method" Url="html/d82b7f0a-79cf-839a-3ab0-c47abfb44835.htm" />
   <HelpKINode Title="ChopLeft method" Url="html/313572f9-7c40-a4e6-93a8-9b45365f208c.htm" />
   <HelpKINode Title="ChopRight method" Url="html/d5e3e03d-af63-77b5-5eea-cafe3b22d144.htm" />
   <HelpKINode Title="Clipboard_SetTextIfNotEmpty method" Url="html/b7fbfeae-3c62-9f55-9418-999175fdd09f.htm" />
   <HelpKINode Title="cn.zuoanqh.open.zut namespace" Url="html/bb2b9e8f-d2cb-8beb-9cea-81540da0a5b8.htm" />
-  <HelpKINode Title="cn.zuoanqh.open.zut.ExclusiveControlGroups(Of K) class" Url="html/c57b1469-9797-8fe7-372f-17ea9ae370cd.htm" />
-  <HelpKINode Title="cn.zuoanqh.open.zut.ExclusiveControlGroups&lt;K&gt; class" Url="html/c57b1469-9797-8fe7-372f-17ea9ae370cd.htm" />
-  <HelpKINode Title="cn.zuoanqh.open.zut.Pair(Of F, S) class" Url="html/e67bea51-337d-a90f-8174-361753d3a58b.htm" />
-  <HelpKINode Title="cn.zuoanqh.open.zut.Pair&lt;F, S&gt; class" Url="html/e67bea51-337d-a90f-8174-361753d3a58b.htm" />
-  <HelpKINode Title="cn.zuoanqh.open.zut.Twin(Of E) class" Url="html/b31afcf2-c8f5-5b95-610e-b1a345751610.htm" />
-  <HelpKINode Title="cn.zuoanqh.open.zut.Twin&lt;E&gt; class" Url="html/b31afcf2-c8f5-5b95-610e-b1a345751610.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.Data namespace" Url="html/3fb529b4-4c39-8d0e-91f4-4d5eb29d7d00.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.Data.Pair(Of F, S) class" Url="html/be855e10-daba-3548-6c7e-6f20397179fd.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.Data.Pair&lt;F, S&gt; class" Url="html/be855e10-daba-3548-6c7e-6f20397179fd.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.Data.Twin(Of E) class" Url="html/548d494b-ed0a-0063-6593-8985149788a9.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.Data.Twin&lt;E&gt; class" Url="html/548d494b-ed0a-0063-6593-8985149788a9.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.FileIO.Text namespace" Url="html/80d13c28-9fde-1ca4-4b67-abc6936a73aa.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.FileIO.Text.ByLineFileIO class" Url="html/3c892fda-9ce9-8142-086a-224a9deec205.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.FileIO.Text.DictionaryFileIO class" Url="html/f6f2f77a-b33b-efb3-5101-64596932c920.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.Processing namespace" Url="html/8cd4c080-7ba0-b09e-4126-eda2315d3e17.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.Processing.Procedure(Of I, O) class" Url="html/7db33304-f26c-df11-d5a0-1296c0574fe4.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.Processing.Procedure&lt;I, O&gt; class" Url="html/7db33304-f26c-df11-d5a0-1296c0574fe4.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.Winform namespace" Url="html/ec606173-c064-d36c-dc9b-d11786dff27a.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.Winform.ExclusiveControlGroups(Of K) class" Url="html/3158087d-c65a-2537-d081-012547880dfa.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.Winform.ExclusiveControlGroups&lt;K&gt; class" Url="html/3158087d-c65a-2537-d081-012547880dfa.htm" />
+  <HelpKINode Title="cn.zuoanqh.open.zut.zerr class" Url="html/6b3c5b91-1c3b-5455-764e-3354c0b63603.htm" />
   <HelpKINode Title="cn.zuoanqh.open.zut.zu class" Url="html/6169d19c-b338-baa0-92ac-8c8d59a5c74c.htm" />
   <HelpKINode Title="cn.zuoanqh.open.zut.zusp class" Url="html/79b857c8-14bc-dda8-b7cb-0e8578ee8b71.htm" />
   <HelpKINode Title="cn.zuoanqh.open.zut.zuwf class" Url="html/7390e1cc-036d-52e3-de19-c93e1d7176b9.htm" />
-  <HelpKINode Title="currentGroup property" Url="html/dac19803-a598-713c-0d12-fa5ed395a28f.htm" />
+  <HelpKINode Title="currentGroup property" Url="html/d2ccc0ff-5d1b-e010-4212-aaf8e3fdbf31.htm" />
   <HelpKINode Title="CutFirst method" Url="html/b9534aa3-3862-3f76-354a-820042da1574.htm" />
   <HelpKINode Title="CutLast method" Url="html/873bf27c-d91f-28da-2b11-a166deb73859.htm" />
+  <HelpKINode Title="d method" Url="html/8b2406f8-7c2c-f1e9-f278-bc92b2ea3d0e.htm" />
+  <HelpKINode Title="DEBUG field" Url="html/ee11b5ae-e859-bd12-33e7-861e192f98bc.htm" />
+  <HelpKINode Title="DictionaryFileIO class">
+    <HelpKINode Title="DictionaryFileIO Class" Url="html/f6f2f77a-b33b-efb3-5101-64596932c920.htm" />
+    <HelpKINode Title="about DictionaryFileIO class" Url="html/f6f2f77a-b33b-efb3-5101-64596932c920.htm" />
+    <HelpKINode Title="constructor" Url="html/c87b6d87-70b6-234f-5390-fa5de62bbcbf.htm" />
+    <HelpKINode Title="methods" Url="html/d9489c06-74b3-cf8b-19bd-07d9ff41ba03.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DictionaryFileIO.DictionaryFileIO constructor" Url="html/c87b6d87-70b6-234f-5390-fa5de62bbcbf.htm" />
+  <HelpKINode Title="DictionaryFileIO.peekFile method" Url="html/6dc09a5c-761a-7d82-85b7-4d407f1ae2f6.htm" />
+  <HelpKINode Title="DictionaryFileIO.readFile method" Url="html/603baec1-f509-b651-3ee7-edb7eb22df3a.htm" />
+  <HelpKINode Title="DictionaryFileIO.writeFile method" Url="html/21e32842-5707-7c0b-7153-ca42404ba9e5.htm" />
+  <HelpKINode Title="DoIfNotNull(Of T) method" Url="html/10afa15f-6982-b784-af18-95ae32085026.htm" />
+  <HelpKINode Title="DoIfNotNull&lt;T&gt; method" Url="html/10afa15f-6982-b784-af18-95ae32085026.htm" />
+  <HelpKINode Title="DoToAll(Of T) method" Url="html/e417d4ea-1ada-dbd3-131f-d0fec577f54f.htm" />
+  <HelpKINode Title="DoToAll&lt;T&gt; method" Url="html/e417d4ea-1ada-dbd3-131f-d0fec577f54f.htm" />
   <HelpKINode Title="Drop method" Url="html/414be9b8-b6a6-0aa0-24d7-a503710711e4.htm" />
   <HelpKINode Title="DropLast method" Url="html/cc901be0-d063-a3f0-9514-bf41355a1df0.htm" />
+  <HelpKINode Title="e method" Url="html/6bc5c0a0-563f-0863-8fa8-304b4b1a4540.htm" />
+  <HelpKINode Title="ERRS field" Url="html/a811cce2-a912-4e04-a275-d3fb3fcda74b.htm" />
   <HelpKINode Title="ExclusiveControlGroups(Of K) class">
-    <HelpKINode Title="ExclusiveControlGroups(K) Class" Url="html/c57b1469-9797-8fe7-372f-17ea9ae370cd.htm" />
-    <HelpKINode Title="about ExclusiveControlGroups(Of K) class" Url="html/c57b1469-9797-8fe7-372f-17ea9ae370cd.htm" />
-    <HelpKINode Title="constructor" Url="html/b53f40ac-e15c-9fb5-a4bd-7b0a0b2dc1fb.htm" />
-    <HelpKINode Title="methods" Url="html/f75ce698-5e46-aba7-a69f-21619f7257e3.htm" />
-    <HelpKINode Title="properties" Url="html/3a32f443-a5ad-8e7b-2b2b-348b56cf06db.htm" />
+    <HelpKINode Title="ExclusiveControlGroups(K) Class" Url="html/3158087d-c65a-2537-d081-012547880dfa.htm" />
+    <HelpKINode Title="about ExclusiveControlGroups(Of K) class" Url="html/3158087d-c65a-2537-d081-012547880dfa.htm" />
+    <HelpKINode Title="constructor" Url="html/37a2912f-f78f-cf69-9bc1-d783084670f6.htm" />
+    <HelpKINode Title="methods" Url="html/207c1168-d67d-da68-a0bb-072650d4c3d7.htm" />
+    <HelpKINode Title="properties" Url="html/4b223f54-0ca8-cc07-c830-dfc6a78ddc4f.htm" />
   </HelpKINode>
-  <HelpKINode Title="ExclusiveControlGroups(Of K).addGroup method" Url="html/ded914b0-3f9e-605a-aa33-767f51693a21.htm" />
-  <HelpKINode Title="ExclusiveControlGroups(Of K).currentGroup property" Url="html/dac19803-a598-713c-0d12-fa5ed395a28f.htm" />
-  <HelpKINode Title="ExclusiveControlGroups(Of K).ExclusiveControlGroups constructor" Url="html/b53f40ac-e15c-9fb5-a4bd-7b0a0b2dc1fb.htm" />
-  <HelpKINode Title="ExclusiveControlGroups(Of K).switchOffAll method" Url="html/bd657d11-e837-a2e0-d8bb-79e99b289ab0.htm" />
-  <HelpKINode Title="ExclusiveControlGroups(Of K).switchTo method" Url="html/1060b902-8443-2349-66a2-0fcfac8e0f24.htm" />
+  <HelpKINode Title="ExclusiveControlGroups(Of K).addGroup method" Url="html/2f6c5644-0399-7668-577e-d63fe247e304.htm" />
+  <HelpKINode Title="ExclusiveControlGroups(Of K).currentGroup property" Url="html/d2ccc0ff-5d1b-e010-4212-aaf8e3fdbf31.htm" />
+  <HelpKINode Title="ExclusiveControlGroups(Of K).ExclusiveControlGroups constructor" Url="html/37a2912f-f78f-cf69-9bc1-d783084670f6.htm" />
+  <HelpKINode Title="ExclusiveControlGroups(Of K).getCurrentGroup method" Url="html/ae3e8c71-189d-274e-b77c-717a426f4b4f.htm" />
+  <HelpKINode Title="ExclusiveControlGroups(Of K).switchOffAll method" Url="html/65ba4b00-177a-7aa9-a4e9-649f352bddd0.htm" />
+  <HelpKINode Title="ExclusiveControlGroups(Of K).switchTo method" Url="html/8bcbe54e-42d4-9d60-2b3e-40e9036ab902.htm" />
   <HelpKINode Title="ExclusiveControlGroups&lt;K&gt; class">
-    <HelpKINode Title="ExclusiveControlGroups(K) Class" Url="html/c57b1469-9797-8fe7-372f-17ea9ae370cd.htm" />
-    <HelpKINode Title="about ExclusiveControlGroups&lt;K&gt; class" Url="html/c57b1469-9797-8fe7-372f-17ea9ae370cd.htm" />
-    <HelpKINode Title="constructor" Url="html/b53f40ac-e15c-9fb5-a4bd-7b0a0b2dc1fb.htm" />
-    <HelpKINode Title="methods" Url="html/f75ce698-5e46-aba7-a69f-21619f7257e3.htm" />
-    <HelpKINode Title="properties" Url="html/3a32f443-a5ad-8e7b-2b2b-348b56cf06db.htm" />
+    <HelpKINode Title="ExclusiveControlGroups(K) Class" Url="html/3158087d-c65a-2537-d081-012547880dfa.htm" />
+    <HelpKINode Title="about ExclusiveControlGroups&lt;K&gt; class" Url="html/3158087d-c65a-2537-d081-012547880dfa.htm" />
+    <HelpKINode Title="constructor" Url="html/37a2912f-f78f-cf69-9bc1-d783084670f6.htm" />
+    <HelpKINode Title="methods" Url="html/207c1168-d67d-da68-a0bb-072650d4c3d7.htm" />
+    <HelpKINode Title="properties" Url="html/4b223f54-0ca8-cc07-c830-dfc6a78ddc4f.htm" />
   </HelpKINode>
-  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt;.addGroup method" Url="html/ded914b0-3f9e-605a-aa33-767f51693a21.htm" />
-  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt;.currentGroup property" Url="html/dac19803-a598-713c-0d12-fa5ed395a28f.htm" />
-  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt;.ExclusiveControlGroups constructor" Url="html/b53f40ac-e15c-9fb5-a4bd-7b0a0b2dc1fb.htm" />
-  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt;.switchOffAll method" Url="html/bd657d11-e837-a2e0-d8bb-79e99b289ab0.htm" />
-  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt;.switchTo method" Url="html/1060b902-8443-2349-66a2-0fcfac8e0f24.htm" />
-  <HelpKINode Title="First field" Url="html/a4c4df21-92f3-0f01-cc9d-289eeb848d7d.htm" />
+  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt;.addGroup method" Url="html/2f6c5644-0399-7668-577e-d63fe247e304.htm" />
+  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt;.currentGroup property" Url="html/d2ccc0ff-5d1b-e010-4212-aaf8e3fdbf31.htm" />
+  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt;.ExclusiveControlGroups constructor" Url="html/37a2912f-f78f-cf69-9bc1-d783084670f6.htm" />
+  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt;.getCurrentGroup method" Url="html/ae3e8c71-189d-274e-b77c-717a426f4b4f.htm" />
+  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt;.switchOffAll method" Url="html/65ba4b00-177a-7aa9-a4e9-649f352bddd0.htm" />
+  <HelpKINode Title="ExclusiveControlGroups&lt;K&gt;.switchTo method" Url="html/8bcbe54e-42d4-9d60-2b3e-40e9036ab902.htm" />
+  <HelpKINode Title="First field" Url="html/b9258c36-e6e2-60a0-25ba-59ab80432a38.htm" />
+  <HelpKINode Title="func field" Url="html/aa24a836-c067-0b5f-e80d-08ae77bae545.htm" />
+  <HelpKINode Title="getCurrentGroup method" Url="html/ae3e8c71-189d-274e-b77c-717a426f4b4f.htm" />
   <HelpKINode Title="Left method" Url="html/0e5b3021-54ae-b6b3-651a-45d7bb619af3.htm" />
   <HelpKINode Title="ListBox_AddTextIfNotContained method" Url="html/f5470c4d-3b9a-9747-fe09-8c3c35dea871.htm" />
   <HelpKINode Title="ListBox_ContainsItemWithText method" Url="html/2dd0290d-ac15-01f4-6282-b62d798f7801.htm" />
   <HelpKINode Title="ListBox_GetSelectedItemText method" Url="html/8e9af7ff-f654-4ce4-c84e-d37229460a16.htm" />
   <HelpKINode Title="ListBox_HaveItemSelected method" Url="html/7213314b-7476-5906-db24-38b0b8c03a53.htm" />
+  <HelpKINode Title="ListBox_MkString method" Url="html/5a8c5693-7962-b736-00ee-009b039a6c1a.htm" />
   <HelpKINode Title="ListBox_RemoveAllSelectedItems method" Url="html/a6ffb46d-872d-e1d3-9c21-b0bf73e22cf8.htm" />
   <HelpKINode Title="ListBox_SelectLast method" Url="html/75a3edbe-3ffe-5961-bb77-3781738695fe.htm" />
   <HelpKINode Title="ListBox_UpdateItem method" Url="html/a42eb189-4938-918d-2fa6-fdd47785596b.htm" />
@@ -65,45 +108,99 @@
   <HelpKINode Title="OtherIfNull(Of T) method" Url="html/ec025d62-8677-fd61-6dfb-f143093dcbf2.htm" />
   <HelpKINode Title="OtherIfNull&lt;T&gt; method" Url="html/ec025d62-8677-fd61-6dfb-f143093dcbf2.htm" />
   <HelpKINode Title="Pair(Of F, S) class">
-    <HelpKINode Title="Pair(F, S) Class" Url="html/e67bea51-337d-a90f-8174-361753d3a58b.htm" />
-    <HelpKINode Title="about Pair(Of F, S) class" Url="html/e67bea51-337d-a90f-8174-361753d3a58b.htm" />
-    <HelpKINode Title="constructor" Url="html/0604b4ed-abbc-ca02-f8f0-5546489014d3.htm" />
-    <HelpKINode Title="fields" Url="html/b8ed00e7-9c6c-c181-1a4e-05cc236346e8.htm" />
+    <HelpKINode Title="Pair(F, S) Class" Url="html/be855e10-daba-3548-6c7e-6f20397179fd.htm" />
+    <HelpKINode Title="about Pair(Of F, S) class" Url="html/be855e10-daba-3548-6c7e-6f20397179fd.htm" />
+    <HelpKINode Title="constructor" Url="html/8daf4fa7-87ed-36b3-559e-e02eaa94d3bd.htm" />
+    <HelpKINode Title="fields" Url="html/86a11a7d-5b15-c5e8-92f7-b15e1bc05750.htm" />
   </HelpKINode>
-  <HelpKINode Title="Pair(Of F, S).First field" Url="html/a4c4df21-92f3-0f01-cc9d-289eeb848d7d.htm" />
-  <HelpKINode Title="Pair(Of F, S).Pair constructor" Url="html/0604b4ed-abbc-ca02-f8f0-5546489014d3.htm" />
-  <HelpKINode Title="Pair(Of F, S).Second field" Url="html/ad8547ca-416d-ef15-fb31-65247a861643.htm" />
+  <HelpKINode Title="Pair(Of F, S).First field" Url="html/b9258c36-e6e2-60a0-25ba-59ab80432a38.htm" />
+  <HelpKINode Title="Pair(Of F, S).Pair constructor" Url="html/8daf4fa7-87ed-36b3-559e-e02eaa94d3bd.htm" />
+  <HelpKINode Title="Pair(Of F, S).Second field" Url="html/8cfa2da5-ecd0-cf90-d866-8c7d1eeae42f.htm" />
   <HelpKINode Title="Pair&lt;F, S&gt; class">
-    <HelpKINode Title="Pair(F, S) Class" Url="html/e67bea51-337d-a90f-8174-361753d3a58b.htm" />
-    <HelpKINode Title="about Pair&lt;F, S&gt; class" Url="html/e67bea51-337d-a90f-8174-361753d3a58b.htm" />
-    <HelpKINode Title="constructor" Url="html/0604b4ed-abbc-ca02-f8f0-5546489014d3.htm" />
-    <HelpKINode Title="fields" Url="html/b8ed00e7-9c6c-c181-1a4e-05cc236346e8.htm" />
+    <HelpKINode Title="Pair(F, S) Class" Url="html/be855e10-daba-3548-6c7e-6f20397179fd.htm" />
+    <HelpKINode Title="about Pair&lt;F, S&gt; class" Url="html/be855e10-daba-3548-6c7e-6f20397179fd.htm" />
+    <HelpKINode Title="constructor" Url="html/8daf4fa7-87ed-36b3-559e-e02eaa94d3bd.htm" />
+    <HelpKINode Title="fields" Url="html/86a11a7d-5b15-c5e8-92f7-b15e1bc05750.htm" />
   </HelpKINode>
-  <HelpKINode Title="Pair&lt;F, S&gt;.First field" Url="html/a4c4df21-92f3-0f01-cc9d-289eeb848d7d.htm" />
-  <HelpKINode Title="Pair&lt;F, S&gt;.Pair constructor" Url="html/0604b4ed-abbc-ca02-f8f0-5546489014d3.htm" />
-  <HelpKINode Title="Pair&lt;F, S&gt;.Second field" Url="html/ad8547ca-416d-ef15-fb31-65247a861643.htm" />
+  <HelpKINode Title="Pair&lt;F, S&gt;.First field" Url="html/b9258c36-e6e2-60a0-25ba-59ab80432a38.htm" />
+  <HelpKINode Title="Pair&lt;F, S&gt;.Pair constructor" Url="html/8daf4fa7-87ed-36b3-559e-e02eaa94d3bd.htm" />
+  <HelpKINode Title="Pair&lt;F, S&gt;.Second field" Url="html/8cfa2da5-ecd0-cf90-d866-8c7d1eeae42f.htm" />
+  <HelpKINode Title="peekFile method" Url="html/6dc09a5c-761a-7d82-85b7-4d407f1ae2f6.htm" />
+  <HelpKINode Title="Procedure(Of I, O) class">
+    <HelpKINode Title="Procedure(I, O) Class" Url="html/7db33304-f26c-df11-d5a0-1296c0574fe4.htm" />
+    <HelpKINode Title="about Procedure(Of I, O) class" Url="html/7db33304-f26c-df11-d5a0-1296c0574fe4.htm" />
+    <HelpKINode Title="constructor" Url="html/9d9713c5-c391-f754-fa6e-f6e940eece0f.htm" />
+    <HelpKINode Title="fields" Url="html/c8730b87-5f4a-34c2-6c64-b612cd59a822.htm" />
+    <HelpKINode Title="methods" Url="html/1a43642a-80cd-900e-1af6-460f4d3dbaba.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Procedure(Of I, O).func field" Url="html/aa24a836-c067-0b5f-e80d-08ae77bae545.htm" />
+  <HelpKINode Title="Procedure(Of I, O).Procedure constructor" Url="html/9d9713c5-c391-f754-fa6e-f6e940eece0f.htm" />
+  <HelpKINode Title="Procedure(Of I, O).Process method" Url="html/5a5bb737-bef7-30b6-f6ad-c7a8688593a4.htm" />
+  <HelpKINode Title="Procedure(Of I, O).then(Of N) method" Url="html/ce878d71-8c0b-7177-a610-7af45f4fff50.htm" />
+  <HelpKINode Title="Procedure&lt;I, O&gt; class">
+    <HelpKINode Title="Procedure(I, O) Class" Url="html/7db33304-f26c-df11-d5a0-1296c0574fe4.htm" />
+    <HelpKINode Title="about Procedure&lt;I, O&gt; class" Url="html/7db33304-f26c-df11-d5a0-1296c0574fe4.htm" />
+    <HelpKINode Title="constructor" Url="html/9d9713c5-c391-f754-fa6e-f6e940eece0f.htm" />
+    <HelpKINode Title="fields" Url="html/c8730b87-5f4a-34c2-6c64-b612cd59a822.htm" />
+    <HelpKINode Title="methods" Url="html/1a43642a-80cd-900e-1af6-460f4d3dbaba.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Procedure&lt;I, O&gt;.func field" Url="html/aa24a836-c067-0b5f-e80d-08ae77bae545.htm" />
+  <HelpKINode Title="Procedure&lt;I, O&gt;.Procedure constructor" Url="html/9d9713c5-c391-f754-fa6e-f6e940eece0f.htm" />
+  <HelpKINode Title="Procedure&lt;I, O&gt;.Process method" Url="html/5a5bb737-bef7-30b6-f6ad-c7a8688593a4.htm" />
+  <HelpKINode Title="Procedure&lt;I, O&gt;.then&lt;N&gt; method" Url="html/ce878d71-8c0b-7177-a610-7af45f4fff50.htm" />
+  <HelpKINode Title="Process method" Url="html/5a5bb737-bef7-30b6-f6ad-c7a8688593a4.htm" />
+  <HelpKINode Title="pw method" Url="html/b85fede8-3d1e-26bd-7004-dc4491cd0b11.htm" />
+  <HelpKINode Title="readFile method">
+    <HelpKINode Title="ByLineFileIO.readFile Method " Url="html/a3ddf698-6bc8-e751-c32f-3f54038e062d.htm" />
+    <HelpKINode Title="DictionaryFileIO.readFile Method " Url="html/603baec1-f509-b651-3ee7-edb7eb22df3a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="readFileNoWhitespace method" Url="html/c312bca4-7388-33cb-409b-57d5c34e3979.htm" />
+  <HelpKINode Title="readFileVerbatim method" Url="html/300b19ce-097f-8c8e-149c-2a215464d954.htm" />
   <HelpKINode Title="Right method" Url="html/407647ff-b08a-e586-2248-441cb10c08eb.htm" />
-  <HelpKINode Title="Second field" Url="html/ad8547ca-416d-ef15-fb31-65247a861643.htm" />
+  <HelpKINode Title="Second field" Url="html/8cfa2da5-ecd0-cf90-d866-8c7d1eeae42f.htm" />
   <HelpKINode Title="Split method" Url="html/b10456c2-6952-e0e9-4fca-5f58b22587c5.htm" />
-  <HelpKINode Title="switchOffAll method" Url="html/bd657d11-e837-a2e0-d8bb-79e99b289ab0.htm" />
-  <HelpKINode Title="switchTo method" Url="html/1060b902-8443-2349-66a2-0fcfac8e0f24.htm" />
+  <HelpKINode Title="switchOffAll method" Url="html/65ba4b00-177a-7aa9-a4e9-649f352bddd0.htm" />
+  <HelpKINode Title="switchTo method" Url="html/8bcbe54e-42d4-9d60-2b3e-40e9036ab902.htm" />
+  <HelpKINode Title="then(Of N) method" Url="html/ce878d71-8c0b-7177-a610-7af45f4fff50.htm" />
+  <HelpKINode Title="then&lt;N&gt; method" Url="html/ce878d71-8c0b-7177-a610-7af45f4fff50.htm" />
   <HelpKINode Title="Twin(Of E) class">
-    <HelpKINode Title="Twin(E) Class" Url="html/b31afcf2-c8f5-5b95-610e-b1a345751610.htm" />
-    <HelpKINode Title="about Twin(Of E) class" Url="html/b31afcf2-c8f5-5b95-610e-b1a345751610.htm" />
-    <HelpKINode Title="constructor" Url="html/fec6a91a-2e8d-7471-f994-638adc8deb32.htm" />
+    <HelpKINode Title="Twin(E) Class" Url="html/548d494b-ed0a-0063-6593-8985149788a9.htm" />
+    <HelpKINode Title="about Twin(Of E) class" Url="html/548d494b-ed0a-0063-6593-8985149788a9.htm" />
+    <HelpKINode Title="constructor" Url="html/978a8a3d-fa6d-af36-b9e7-dfcee31dcda3.htm" />
   </HelpKINode>
-  <HelpKINode Title="Twin(Of E).Twin constructor" Url="html/fec6a91a-2e8d-7471-f994-638adc8deb32.htm" />
+  <HelpKINode Title="Twin(Of E).Twin constructor" Url="html/978a8a3d-fa6d-af36-b9e7-dfcee31dcda3.htm" />
   <HelpKINode Title="Twin&lt;E&gt; class">
-    <HelpKINode Title="Twin(E) Class" Url="html/b31afcf2-c8f5-5b95-610e-b1a345751610.htm" />
-    <HelpKINode Title="about Twin&lt;E&gt; class" Url="html/b31afcf2-c8f5-5b95-610e-b1a345751610.htm" />
-    <HelpKINode Title="constructor" Url="html/fec6a91a-2e8d-7471-f994-638adc8deb32.htm" />
+    <HelpKINode Title="Twin(E) Class" Url="html/548d494b-ed0a-0063-6593-8985149788a9.htm" />
+    <HelpKINode Title="about Twin&lt;E&gt; class" Url="html/548d494b-ed0a-0063-6593-8985149788a9.htm" />
+    <HelpKINode Title="constructor" Url="html/978a8a3d-fa6d-af36-b9e7-dfcee31dcda3.htm" />
   </HelpKINode>
-  <HelpKINode Title="Twin&lt;E&gt;.Twin constructor" Url="html/fec6a91a-2e8d-7471-f994-638adc8deb32.htm" />
+  <HelpKINode Title="Twin&lt;E&gt;.Twin constructor" Url="html/978a8a3d-fa6d-af36-b9e7-dfcee31dcda3.htm" />
+  <HelpKINode Title="writeFile method">
+    <HelpKINode Title="ByLineFileIO.writeFile Method " Url="html/d82b7f0a-79cf-839a-3ab0-c47abfb44835.htm" />
+    <HelpKINode Title="DictionaryFileIO.writeFile Method " Url="html/21e32842-5707-7c0b-7153-ca42404ba9e5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="zerr class">
+    <HelpKINode Title="zerr Class" Url="html/6b3c5b91-1c3b-5455-764e-3354c0b63603.htm" />
+    <HelpKINode Title="about zerr class" Url="html/6b3c5b91-1c3b-5455-764e-3354c0b63603.htm" />
+    <HelpKINode Title="constructor" Url="html/c50ca37e-760e-28da-da19-c720864b4793.htm" />
+    <HelpKINode Title="fields" Url="html/806172e5-1229-456e-3302-6d5aa8857d09.htm" />
+    <HelpKINode Title="methods" Url="html/12453bfb-f3ae-a336-76d3-cbdcab7b675e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="zerr.d method" Url="html/8b2406f8-7c2c-f1e9-f278-bc92b2ea3d0e.htm" />
+  <HelpKINode Title="zerr.DEBUG field" Url="html/ee11b5ae-e859-bd12-33e7-861e192f98bc.htm" />
+  <HelpKINode Title="zerr.e method" Url="html/6bc5c0a0-563f-0863-8fa8-304b4b1a4540.htm" />
+  <HelpKINode Title="zerr.ERRS field" Url="html/a811cce2-a912-4e04-a275-d3fb3fcda74b.htm" />
+  <HelpKINode Title="zerr.pw method" Url="html/b85fede8-3d1e-26bd-7004-dc4491cd0b11.htm" />
+  <HelpKINode Title="zerr.zerr constructor" Url="html/c50ca37e-760e-28da-da19-c720864b4793.htm" />
   <HelpKINode Title="zu class">
     <HelpKINode Title="zu Class" Url="html/6169d19c-b338-baa0-92ac-8c8d59a5c74c.htm" />
     <HelpKINode Title="about zu class" Url="html/6169d19c-b338-baa0-92ac-8c8d59a5c74c.htm" />
     <HelpKINode Title="methods" Url="html/64ff3656-7d6c-1dbc-e050-439fe6853112.htm" />
   </HelpKINode>
+  <HelpKINode Title="zu.DoIfNotNull(Of T) method" Url="html/10afa15f-6982-b784-af18-95ae32085026.htm" />
+  <HelpKINode Title="zu.DoIfNotNull&lt;T&gt; method" Url="html/10afa15f-6982-b784-af18-95ae32085026.htm" />
+  <HelpKINode Title="zu.DoToAll(Of T) method" Url="html/e417d4ea-1ada-dbd3-131f-d0fec577f54f.htm" />
+  <HelpKINode Title="zu.DoToAll&lt;T&gt; method" Url="html/e417d4ea-1ada-dbd3-131f-d0fec577f54f.htm" />
   <HelpKINode Title="zu.ListDiff(Of T) method" Url="html/9f8bb483-f838-019e-1a98-084cb5c1bc93.htm" />
   <HelpKINode Title="zu.ListDiff&lt;T&gt; method" Url="html/9f8bb483-f838-019e-1a98-084cb5c1bc93.htm" />
   <HelpKINode Title="zu.openDirectory method" Url="html/4aafbfcf-56e9-071d-3cd9-71271445e385.htm" />
@@ -133,6 +230,7 @@
   <HelpKINode Title="zuwf.ListBox_ContainsItemWithText method" Url="html/2dd0290d-ac15-01f4-6282-b62d798f7801.htm" />
   <HelpKINode Title="zuwf.ListBox_GetSelectedItemText method" Url="html/8e9af7ff-f654-4ce4-c84e-d37229460a16.htm" />
   <HelpKINode Title="zuwf.ListBox_HaveItemSelected method" Url="html/7213314b-7476-5906-db24-38b0b8c03a53.htm" />
+  <HelpKINode Title="zuwf.ListBox_MkString method" Url="html/5a8c5693-7962-b736-00ee-009b039a6c1a.htm" />
   <HelpKINode Title="zuwf.ListBox_RemoveAllSelectedItems method" Url="html/a6ffb46d-872d-e1d3-9c21-b0bf73e22cf8.htm" />
   <HelpKINode Title="zuwf.ListBox_SelectLast method" Url="html/75a3edbe-3ffe-5961-bb77-3781738695fe.htm" />
   <HelpKINode Title="zuwf.ListBox_UpdateItem method" Url="html/a42eb189-4938-918d-2fa6-fdd47785596b.htm" />

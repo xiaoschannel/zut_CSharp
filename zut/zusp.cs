@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cn.zuoanqh.open.zut.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,10 @@ namespace cn.zuoanqh.open.zut
   public static class zusp
   {
     /// <summary>
-    /// 
+    /// Return first n charecters.
     /// </summary>
-    /// <param name="s">The target string.</param>
-    /// <param name="n">The amount of charecters.</param>
+    /// <param name="s">Target string</param>
+    /// <param name="n">Amount of charecters</param>
     /// <returns> The leftmost n charecters of s. If s is not long enough, the entire string is returned.</returns>
     public static string Left(string s, int n)
     {
@@ -25,11 +26,11 @@ namespace cn.zuoanqh.open.zut
     }
 
     /// <summary>
-    /// 
+    /// Return last n charecters.
     /// </summary>
-    /// <param name="s">The target string.</param>
-    /// <param name="n">The amount of charecters.</param>
-    /// <returns> The leftmost n charecters of s. If s is not long enough, the entire string is returned.</returns>
+    /// <param name="s">Target string</param>
+    /// <param name="n">Amount of charecters</param>
+    /// <returns> The rightmost n charecters of s. If s is not long enough, the entire string is returned.</returns>
     public static string Right(string s, int n)
     {
       if (s == null) throw new ArgumentNullException("s");
@@ -38,7 +39,7 @@ namespace cn.zuoanqh.open.zut
     }
 
     /// <summary>
-    /// Remove the first n charecters from the given string. 
+    /// Remove first n charecters. 
     /// </summary>
     /// <param name="s"></param>
     /// <param name="n"></param>
@@ -48,8 +49,9 @@ namespace cn.zuoanqh.open.zut
       if (s.Length <= n) return "";
       return s.Substring(n);
     }
+
     /// <summary>
-    /// Remove the last n charecters from the given string. 
+    /// Remove last n charecters. 
     /// </summary>
     /// <param name="s"></param>
     /// <param name="n"></param>
@@ -61,23 +63,23 @@ namespace cn.zuoanqh.open.zut
     }
 
     /// <summary>
-    /// Chop the given string into two part, where the first part have n charecters.
+    /// Chop string into two part. First part have n charecters.
     /// The two part are equavilent to Left(s, n) and Drop(s, n) respectively.
     /// </summary>
     /// <param name="s"></param>
     /// <param name="n"></param>
-    /// <returns>The two parts. The entire string then empty string if given string is not long enough.</returns>
+    /// <returns>The two parts. If given string is not long enough, s then empty string.</returns>
     public static Twin<string> ChopLeft(string s, int n)
     {
       return new Twin<string>(Left(s, n), Drop(s, n));
     }
     /// <summary>
-    /// Chop the given string into two part, where the first part have n charecters.
+    /// Chop string into two part. Second part have n charecters.
     /// The two part are equavilent to DropLast(s, n) and Right(s, n) respectively.
     /// </summary>
     /// <param name="s"></param>
     /// <param name="n"></param>
-    /// <returns>The two parts. Empty string then the entire string if given string is not long enough.</returns>
+    /// <returns>The two parts. If given string is not long enough, empty string then s.</returns>
     public static Twin<string> ChopRight(string s, int n)
     {
       return new Twin<string>(DropLast(s, n), Right(s, n));
@@ -118,7 +120,7 @@ namespace cn.zuoanqh.open.zut
     /// </summary>
     /// <param name="s"></param>
     /// <param name="Separator"></param>
-    /// <returns></returns>
+    /// <returns>Strings after divided by the separator. Empty strings are filtered out.</returns>
     public static string[] Split(string s, string Separator)
     {
       if (s == null) throw new ArgumentNullException("s");

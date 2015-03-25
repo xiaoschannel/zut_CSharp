@@ -26,9 +26,10 @@
     <CleanIntermediates>True</CleanIntermediates>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\zut\zut.csproj" />
-<DocumentationSource sourceFile="..\zut\bin\Debug\zut.dll" />
-<DocumentationSource sourceFile="..\zut\bin\Debug\zut.XML" /></DocumentationSources>
-    <VisibleItems>Protected, ProtectedInternalAsProtected</VisibleItems>
+      <DocumentationSource sourceFile="..\zut\bin\Debug\zut.dll" />
+      <DocumentationSource sourceFile="..\zut\bin\Debug\zut.XML" />
+    </DocumentationSources>
+    <VisibleItems>Internals, Protected, ProtectedInternalAsProtected</VisibleItems>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->
