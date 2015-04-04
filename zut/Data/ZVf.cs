@@ -61,6 +61,13 @@ namespace cn.zuoanqh.open.zut.Data
         data[i] = this.data[i] * that.data[i];
       return new ZVf(data);
     }
-
+    /// <summary>
+    /// Return a string in the form of "[n1, n2, ... ]".
+    /// </summary>
+    /// <returns></returns>
+    public override string ToString()
+    {
+      return zusp.List("[]", ", ", data);
+    }
   }
 }
