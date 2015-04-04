@@ -30,6 +30,16 @@
       <DocumentationSource sourceFile="..\zut\bin\Debug\zut.XML" />
     </DocumentationSources>
     <VisibleItems>Internals, Protected, ProtectedInternalAsProtected</VisibleItems>
+    <MaximumGroupParts>2</MaximumGroupParts>
+    <NamespaceGrouping>True</NamespaceGrouping>
+    <SyntaxFilters>Standard</SyntaxFilters>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <RootNamespaceContainer>True</RootNamespaceContainer>
+    <PresentationStyle>VS2013</PresentationStyle>
+    <Preliminary>False</Preliminary>
+    <NamingMethod>Guid</NamingMethod>
+    <HelpTitle>A Sandcastle Documented Class Library</HelpTitle>
+    <ContentPlacement>BelowNamespaces</ContentPlacement>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

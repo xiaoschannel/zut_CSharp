@@ -43,6 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\ZVf.cs" />
+    <Compile Include="Data\ZVf2.cs" />
+    <Compile Include="Data\ZVf3.cs" />
+    <Compile Include="Data\ZVf4.cs" />
+    <Compile Include="Data\ZVi2.cs" />
+    <Compile Include="Data\ZVi.cs" />
+    <Compile Include="Data\ZVi3.cs" />
+    <Compile Include="Data\ZVi4.cs" />
     <Compile Include="FileIO\Text\ByLineFileIO.cs" />
     <Compile Include="FileIO\Text\DictionaryFileIO.cs" />
     <Compile Include="Processing\Procedure.cs" />

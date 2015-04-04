@@ -175,7 +175,12 @@ namespace cn.zuoanqh.open.zut
     {
       return l.SelectedItems.Count > 0;
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="l"></param>
+    /// <param name="delim"></param>
+    /// <returns>A string made from items of the given ListBox.</returns>
     public static string ListBox_MkString(ListBox l, char delim)
     {
       if (l.Items.Count == 0) return "";

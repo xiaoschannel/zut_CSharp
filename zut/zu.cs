@@ -88,5 +88,42 @@ namespace cn.zuoanqh.open.zut
     {
       foreach (T t in targets) action.Invoke(t);
     }
+
+    /// <summary>
+    /// Resizes array and keeps allowed data.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="array"></param>
+    /// <param name="newSize"></param>
+    /// <returns>Resized array. Data will be lost if resized to a smaller array.</returns>
+    public static T[] ArrayResize<T>(T[] array, int newSize)
+    {
+      T[] ans = new T[newSize];
+      int min = Math.Min(array.Length, newSize);
+
+      for (int i = 0; i < min; i++) ans[i] = array[i];
+
+      return ans;
+    }
+    /// <summary>
+    /// Resizes array and keeps allowed data.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="array"></param>
+    /// <param name="newSizeD0"></param>
+    /// <param name="newSizeD1"></param>
+    /// <returns>Resized array. Data will be lost on a dimension if resized to a smaller array.</returns>
+    public static T[,] ArrayResize<T>(T[,] array, int newSizeD0, int newSizeD1)
+    {
+      T[,] ans = new T[newSizeD0,newSizeD1];
+      int min0 = Math.Min(array.GetLength(0),newSizeD0);
+      int min1 = Math.Min(array.GetLength(1),newSizeD1);
+
+      for (int i = 0; i < min0; i++)
+        for (int j = 0; j < min1; j++)
+          ans[i, j] = array[i, j];
+
+      return ans;
+    }
   }
 }

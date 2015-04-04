@@ -127,5 +127,6 @@ namespace cn.zuoanqh.open.zut
       if (Separator == null) throw new ArgumentNullException("Separator");
       return s.Split(new string[] { Separator }, StringSplitOptions.None).Where(r => r.Trim().Length > 0).Select(r => r).ToArray();
     }
+
   }
 }
