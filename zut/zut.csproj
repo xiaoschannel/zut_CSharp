@@ -54,6 +54,7 @@
     <Compile Include="FileIO\Text\ByLineFileIO.cs" />
     <Compile Include="FileIO\Text\DictionaryFileIO.cs" />
     <Compile Include="Processing\Procedure.cs" />
+    <Compile Include="StopWatch.cs" />
     <Compile Include="Winform\ExclusiveControlGroups.cs" />
     <Compile Include="Data\Pair.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

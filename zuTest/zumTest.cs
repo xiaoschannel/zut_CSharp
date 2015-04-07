@@ -27,5 +27,16 @@ namespace cn.zuoanqh.open.zut.unittest
       Assert.AreEqual(16, zum.DiscretizeLogrithmic(16, 2));
       Assert.AreEqual(16, zum.DiscretizeLogrithmic(17, 2));
     }
+
+    [TestMethod]
+    public void TestDiscretizeLinearTime()
+    {
+      StopWatch w = new StopWatch();
+      for (int i = 0; i < 1000; i++)
+      { zum.DiscretizeLinear(i, 2); }
+      double t = w.Click();
+      float a = 1;
+    }
+
   }
 }
