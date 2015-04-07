@@ -99,7 +99,6 @@ namespace cn.zuoanqh.open.zut
     /// <param name="UpperBound"></param>
     /// <returns>N or one of the bounds. Inclusive.</returns>
     public static double Bound(double n, double LowerBound, double UpperBound) { return Math.Max(Math.Min(n, UpperBound), LowerBound); }
-
     /// <summary>
     /// Discretizes a function linearly. Example: 
     ///         factor 2
@@ -114,6 +113,45 @@ namespace cn.zuoanqh.open.zut
       return n - (n % Factor);
     }
     /// <summary>
+    /// Discretizes a function linearly. Example: 
+    ///         factor 2
+    /// Number: 1 2 3 4 5 6 7 8 9
+    /// Result: 0 2 2 4 4 6 6 8 8
+    /// </summary>
+    /// <param name="n"></param>
+    /// <param name="Factor"></param>
+    /// <returns>Closest multiple of factor. Rounds down.</returns>
+    public static long DiscretizeLinear(long n, long Factor)
+    {
+      return n - (n % Factor);
+    }
+    /// <summary>
+    /// Discretizes a function linearly. Example: 
+    ///         factor 2
+    /// Number: 1 2 3 4 5 6 7 8 9
+    /// Result: 0 2 2 4 4 6 6 8 8
+    /// </summary>
+    /// <param name="n"></param>
+    /// <param name="Factor"></param>
+    /// <returns>Closest multiple of factor. Rounds down.</returns>
+    public static float DiscretizeLinear(float n, float Factor)
+    {
+      return ((float)(Math.Floor(n/Factor)))*Factor;
+    }
+    /// <summary>
+    /// Discretizes a function linearly. Example: 
+    ///         factor 2
+    /// Number: 1 2 3 4 5 6 7 8 9
+    /// Result: 0 2 2 4 4 6 6 8 8
+    /// </summary>
+    /// <param name="n"></param>
+    /// <param name="Factor"></param>
+    /// <returns>Closest multiple of factor. Rounds down.</returns>
+    public static double DiscretizeLinear(double n, double Factor)
+    {
+      return Math.Floor(n / Factor) * Factor;
+    }
+    /// <summary>
     /// Discretizes a function logrithmically. Example: 
     ///         base 2
     /// Number: 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
@@ -125,6 +163,45 @@ namespace cn.zuoanqh.open.zut
     public static int DiscretizeLogrithmic(int n, int Base)
     {
       return (int)(Math.Pow(Base, Math.Floor(Math.Log(n, Base))));
+    }
+    /// <summary>
+    /// Discretizes a function logrithmically. Example: 
+    ///         base 2
+    /// Number: 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+    /// Result: 1  2  2  4  4  4  4  8  8  8  8  8  8  8  8 16
+    /// </summary>
+    /// <param name="n"></param>
+    /// <param name="Base"></param>
+    /// <returns>Closest integer power of given base. Rounds down.</returns>
+    public static long DiscretizeLogrithmic(long n, long Base)
+    {
+      return (long)(Math.Pow(Base, Math.Floor(Math.Log(n, Base))));
+    }
+    /// <summary>
+    /// Discretizes a function logrithmically. Example: 
+    ///         base 2
+    /// Number: 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+    /// Result: 1  2  2  4  4  4  4  8  8  8  8  8  8  8  8 16
+    /// </summary>
+    /// <param name="n"></param>
+    /// <param name="Base"></param>
+    /// <returns>Closest integer power of given base. Rounds down.</returns>
+    public static float DiscretizeLogrithmic(float n, float Base)
+    {
+      return (float)(Math.Pow(Base, Math.Floor(Math.Log(n, Base))));
+    }
+    /// <summary>
+    /// Discretizes a function logrithmically. Example: 
+    ///         base 2
+    /// Number: 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+    /// Result: 1  2  2  4  4  4  4  8  8  8  8  8  8  8  8 16
+    /// </summary>
+    /// <param name="n"></param>
+    /// <param name="Base"></param>
+    /// <returns>Closest integer power of given base. Rounds down.</returns>
+    public static double DiscretizeLogrithmic(double n, double Base)
+    {
+      return Math.Pow(Base, Math.Floor(Math.Log(n, Base)));
     }
   }
 }
