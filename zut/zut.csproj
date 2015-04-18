@@ -43,14 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\ZVf.cs" />
-    <Compile Include="Data\ZVf2.cs" />
-    <Compile Include="Data\ZVf3.cs" />
-    <Compile Include="Data\ZVf4.cs" />
-    <Compile Include="Data\ZVi2.cs" />
-    <Compile Include="Data\ZVi.cs" />
-    <Compile Include="Data\ZVi3.cs" />
-    <Compile Include="Data\ZVi4.cs" />
+    <Compile Include="Data\zvf.cs" />
+    <Compile Include="Data\zvf2.cs" />
+    <Compile Include="Data\zvf3.cs" />
+    <Compile Include="Data\zvf4.cs" />
+    <Compile Include="Data\zvi2.cs" />
+    <Compile Include="Data\zvi.cs" />
+    <Compile Include="Data\zvi3.cs" />
+    <Compile Include="Data\zvi4.cs" />
     <Compile Include="FileIO\Text\ByLineFileIO.cs" />
     <Compile Include="FileIO\Text\DictionaryFileIO.cs" />
     <Compile Include="Processing\Procedure.cs" />

@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace cn.zuoanqh.open.zut.Data
 {
-  public class ZVf2 : ZVf
+  public class zvf2 : zvf
   {
-    public ZVf2(float first, float second)
+    public zvf2(float first, float second)
       : base(first, second) { }
+
+    public float x { get { return this[0]; } }
+    public float y { get { return this[1]; } }
+
+    public zvf2 xy { get { return this; } }
+    public zvf2 yx { get { return new zvf2(y, x); } }
   }
 }

@@ -10,7 +10,7 @@ namespace cn.zuoanqh.open.zut.Data
   /// Zuoanqh's Vector of ints.
   /// A functional vector that allows arbitary length.
   /// </summary>
-  public class ZVi
+  public class zvi
   {
     private int[] data;
 
@@ -18,7 +18,7 @@ namespace cn.zuoanqh.open.zut.Data
     /// Create vector with given data.
     /// </summary>
     /// <param name="Data"></param>
-    public ZVi(params int[] Data)
+    public zvi(params int[] Data)
     { this.data = Data; }
 
     /// <summary>
@@ -39,7 +39,7 @@ namespace cn.zuoanqh.open.zut.Data
     /// </summary>
     /// <param name="that"></param>
     /// <returns></returns>
-    public bool sameLength(ZVi that)
+    public bool sameLength(zvi that)
     { return this.Length == that.Length; }
 
     /// <summary>
@@ -49,13 +49,13 @@ namespace cn.zuoanqh.open.zut.Data
     /// <param name="op1"></param>
     /// <param name="op2"></param>
     /// <returns></returns>
-    public static ZVi operator +(ZVi op1, ZVi op2)
+    public static zvi operator +(zvi op1, zvi op2)
     {
       if (!op1.sameLength(op2)) throw new ArgumentException("Vector not same length");
       int[] data = new int[op1.Length];
       for (int i = 0; i < op1.Length; i++)
         data[i] = op1.data[i] + op2.data[i];
-      return new ZVi(data);
+      return new zvi(data);
     }
 
     /// <summary>
@@ -64,12 +64,12 @@ namespace cn.zuoanqh.open.zut.Data
     /// <param name="op1"></param>
     /// <param name="s"></param>
     /// <returns></returns>
-    public static ZVi operator *(ZVi op1, int s)
+    public static zvi operator *(zvi op1, int s)
     {
       int[] data = new int[op1.Length];
       for (int i = 0; i < op1.Length; i++)
         data[i] = op1.data[i] * s;
-      return new ZVi(data);
+      return new zvi(data);
     }
 
     /// <summary>
@@ -79,7 +79,7 @@ namespace cn.zuoanqh.open.zut.Data
     /// <param name="op1"></param>
     /// <param name="op2"></param>
     /// <returns></returns>
-    public static ZVi operator -(ZVi op1, ZVi op2)
+    public static zvi operator -(zvi op1, zvi op2)
     { return op1 + op2 * -1; }
 
     /// <summary>
@@ -89,12 +89,12 @@ namespace cn.zuoanqh.open.zut.Data
     /// <param name="op1"></param>
     /// <param name="s"></param>
     /// <returns></returns>
-    public static ZVi operator /(ZVi op1, int s)
+    public static zvi operator /(zvi op1, int s)
     {
       int[] data = new int[op1.Length];
       for (int i = 0; i < op1.Length; i++)
         data[i] = op1.data[i] / s;
-      return new ZVi(data);
+      return new zvi(data);
     }
 
     /// <summary>
@@ -103,13 +103,13 @@ namespace cn.zuoanqh.open.zut.Data
     /// </summary>
     /// <param name="that"></param>
     /// <returns></returns>
-    public ZVi dot(ZVi that)
+    public zvi dot(zvi that)
     {
       if (!sameLength(that)) throw new ArgumentException("Vector not same length");
       int[] data = new int[this.Length];
       for (int i = 0; i < this.Length; i++)
         data[i] = this.data[i] * that.data[i];
-      return new ZVi(data);
+      return new zvi(data);
     }
 
     /// <summary>
@@ -118,7 +118,7 @@ namespace cn.zuoanqh.open.zut.Data
     /// <param name="op1"></param>
     /// <param name="op2"></param>
     /// <returns></returns>
-    public static bool operator ==(ZVi op1, ZVi op2)
+    public static bool operator ==(zvi op1, zvi op2)
     {
       if (!op1.sameLength(op2)) return false;
 
@@ -134,7 +134,7 @@ namespace cn.zuoanqh.open.zut.Data
     /// <param name="op1"></param>
     /// <param name="op2"></param>
     /// <returns></returns>
-    public static bool operator !=(ZVi op1, ZVi op2)
+    public static bool operator !=(zvi op1, zvi op2)
     {
       return !(op1 == op2);
     }
@@ -151,7 +151,7 @@ namespace cn.zuoanqh.open.zut.Data
     {
       if (! base.Equals(obj))return false;
       if (obj.GetType() != this.GetType()) return false;
-      if (!(this == (ZVi)obj)) return false;
+      if (!(this == (zvi)obj)) return false;
       return true;
     }
 
