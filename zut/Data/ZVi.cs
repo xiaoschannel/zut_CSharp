@@ -73,6 +73,21 @@ namespace cn.zuoanqh.open.zut.Data
     }
 
     /// <summary>
+    /// Multiply every value in this vector by a given number.
+    /// </summary>
+    /// <param name="op1"></param>
+    /// <param name="s"></param>
+    /// <returns></returns>
+    public static zvi operator *(zvi op1, float s)
+    {
+      int[] data = new int[op1.Length];
+      for (int i = 0; i < op1.Length; i++)
+        data[i] = (int)(op1.data[i] * s);
+      return new zvi(data);
+    }
+
+
+    /// <summary>
     /// Arithmatic minus on element pairs.
     /// Throws exception if two vectors are not the same length.
     /// </summary>
@@ -94,6 +109,21 @@ namespace cn.zuoanqh.open.zut.Data
       int[] data = new int[op1.Length];
       for (int i = 0; i < op1.Length; i++)
         data[i] = op1.data[i] / s;
+      return new zvi(data);
+    }
+
+    /// <summary>
+    /// Divide every value in this vector by a given number. 
+    /// Integer division rules apply.
+    /// </summary>
+    /// <param name="op1"></param>
+    /// <param name="s"></param>
+    /// <returns></returns>
+    public static zvi operator /(zvi op1, float s)
+    {
+      int[] data = new int[op1.Length];
+      for (int i = 0; i < op1.Length; i++)
+        data[i] = (int)(op1.data[i] / s);
       return new zvi(data);
     }
 

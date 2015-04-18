@@ -6,16 +6,169 @@ using System.Threading.Tasks;
 
 namespace cn.zuoanqh.open.zut.Data
 {
-  public class zvf3 : zvf
+  public class zvf3
   {
+    private float[] data;
+    /// <summary>
+    /// Create vector with given data.
+    /// </summary>
+    /// <param name="Data"></param>
+    private zvf3(params float[] Data)
+    { this.data = Data; }
     public zvf3(float first, float second, float third)
-      : base(first, second, third) { }
-
-    public zvf3(zvf2 vec, float third) 
+      : this(new float[] { first, second, third }) { }
+    public zvf3(zvf2 vec, float third)
       : this(vec[0], vec[1], third) { }
 
+    public static implicit operator zvf3(zvf vec)
+    {
+      if (vec.Length != 3) throw new InvalidCastException("Given vector's length is not 3.");
+      return new zvf3(vec[0], vec[1], vec[2]);
+    }
     public static explicit operator zvf2(zvf3 v)
     { return new zvf2(v[0], v[1]); }
+    public static implicit operator zvf(zvf3 vec)
+    { return new zvf(vec.data); }
+
+    /// <summary>
+    /// Returns data at given location. Starting at 0.
+    /// </summary>
+    /// <param name="i"></param>
+    /// <returns></returns>
+    public float this[int i]
+    { get { return data[i]; } }
+
+    /// <summary>
+    /// Length of the vector.
+    /// </summary>
+    public int Length { get { return this.data.Length; } }
+
+    /// <summary>
+    /// Arithmatic add on element pairs.
+    /// Throws exception if two vectors are not the same length.
+    /// </summary>
+    /// <param name="op1"></param>
+    /// <param name="op2"></param>
+    /// <returns></returns>
+    public static zvf3 operator +(zvf3 op1, zvf3 op2)
+    {
+      float[] data = new float[op1.Length];
+      for (int i = 0; i < op1.Length; i++)
+        data[i] = op1.data[i] + op2.data[i];
+      return new zvf3(data);
+    }
+
+    /// <summary>
+    /// Multiply every value in this vector by a given number.
+    /// </summary>
+    /// <param name="op1"></param>
+    /// <param name="s"></param>
+    /// <returns></returns>
+    public static zvf3 operator *(zvf3 op1, float s)
+    {
+      float[] data = new float[op1.Length];
+      for (int i = 0; i < op1.Length; i++)
+        data[i] = op1.data[i] * s;
+      return new zvf3(data);
+    }
+
+    /// <summary>
+    /// Arithmatic minus on element pairs.
+    /// Throws exception if two vectors are not the same length.
+    /// </summary>
+    /// <param name="op1"></param>
+    /// <param name="op2"></param>
+    /// <returns></returns>
+    public static zvf3 operator -(zvf3 op1, zvf3 op2)
+    { return op1 + op2 * -1; }
+
+    /// <summary>
+    /// Divide every value in this vector by a given number. 
+    /// floateger division rules apply.
+    /// </summary>
+    /// <param name="op1"></param>
+    /// <param name="s"></param>
+    /// <returns></returns>
+    public static zvf3 operator /(zvf3 op1, float s)
+    {
+      float[] data = new float[op1.Length];
+      for (int i = 0; i < op1.Length; i++)
+        data[i] = op1.data[i] / s;
+      return new zvf3(data);
+    }
+
+    /// <summary>
+    /// Dot product with that vector.
+    /// Throws exception if two vectors are not the same length.
+    /// </summary>
+    /// <param name="that"></param>
+    /// <returns></returns>
+    public zvf3 dot(zvf3 that)
+    {
+      float[] data = new float[this.Length];
+      for (int i = 0; i < this.Length; i++)
+        data[i] = this.data[i] * that.data[i];
+      return new zvf3(data);
+    }
+
+    /// <summary>
+    /// Two vectors are == if they are the same length, and all values are the same.
+    /// </summary>
+    /// <param name="op1"></param>
+    /// <param name="op2"></param>
+    /// <returns></returns>
+    public static bool operator ==(zvf3 op1, zvf3 op2)
+    {
+      for (int i = 0; i < op1.Length; i++)
+        if (op1[i] != op2[i]) return false;
+
+      return true;
+    }
+
+    /// <summary>
+    /// Simply the negation of the == operator.
+    /// </summary>
+    /// <param name="op1"></param>
+    /// <param name="op2"></param>
+    /// <returns></returns>
+    public static bool operator !=(zvf3 op1, zvf3 op2)
+    {
+      return !(op1 == op2);
+    }
+
+    /// <summary>
+    /// This vector is equal to the other object if:
+    /// 1, Base.Equals pass.
+    /// 2, They are the same type.
+    /// 3, == check pass.
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <returns></returns>
+    public override bool Equals(object obj)
+    {
+      if (!base.Equals(obj)) return false;
+      if (obj.GetType() != this.GetType()) return false;
+      if (!(this == (zvf3)obj)) return false;
+      return true;
+    }
+
+    /// <summary>
+    /// Same as base.GetHashCode to make compiler shut up.
+    /// </summary>
+    /// <returns></returns>
+    public override int GetHashCode()
+    {
+      return base.GetHashCode();
+    }
+
+    /// <summary>
+    /// Return a string in the form of "[n1, n2, ... ]".
+    /// </summary>
+    /// <returns></returns>
+    public override string ToString()
+    {
+      return zusp.List("[]", ", ", data);
+    }
 
     public float x { get { return this[0]; } }
     public float y { get { return this[1]; } }

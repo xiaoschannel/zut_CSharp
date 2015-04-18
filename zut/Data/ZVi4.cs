@@ -6,19 +6,204 @@ using System.Threading.Tasks;
 
 namespace cn.zuoanqh.open.zut.Data
 {
-  public class zvi4 : zvi
+  public class zvi4 
   {
-    public zvi4(int first, int second, int third, int forth)
-      : base(first, second, third, forth) { }
-    public zvi4(zvi3 vec, int forth)
-      : base(vec[0], vec[1], vec[2], forth) { }
-    public zvi4(zvi2 vec, int third, int forth)
-      : base(vec[0], vec[1], third, forth) { }
 
-    public static explicit operator zvi3(zvi4 v)
-    { return new zvi3(v[0], v[1], v[2]); }
+    private int[] data;
+    /// <summary>
+    /// Create vector with given data.
+    /// </summary>
+    /// <param name="Data"></param>
+    private zvi4(params int[] Data)
+    { this.data = Data; }
+    public zvi4(int first, int second, int third, int forth)
+      : this(new int[] { first, second, third, forth }) { }
+    public zvi4(zvi3 vec, int forth)
+      : this(vec[0], vec[1], vec[2], forth) { }
+    public zvi4(zvi2 vec, int third, int forth)
+      : this(vec[0], vec[1], third, forth) { }
+
+    public static implicit operator zvi4(zvi vec)
+    {
+      if (vec.Length != 4) throw new InvalidCastException("Given vector's length is not 4.");
+      return new zvi4(vec[0], vec[1], vec[2], vec[3]);
+    }
     public static explicit operator zvi2(zvi4 v)
     { return new zvi2(v[0], v[1]); }
+    public static explicit operator zvi3(zvi4 v)
+    { return new zvi3(v[0], v[1], v[2]); }
+    public static implicit operator zvi(zvi4 vec)
+    { return new zvi(vec.data); }
+
+    /// <summary>
+    /// Returns data at given location. Starting at 0.
+    /// </summary>
+    /// <param name="i"></param>
+    /// <returns></returns>
+    public int this[int i]
+    { get { return data[i]; } }
+
+    /// <summary>
+    /// Length of the vector.
+    /// </summary>
+    public int Length { get { return this.data.Length; } }
+
+    /// <summary>
+    /// Arithmatic add on element pairs.
+    /// Throws exception if two vectors are not the same length.
+    /// </summary>
+    /// <param name="op1"></param>
+    /// <param name="op2"></param>
+    /// <returns></returns>
+    public static zvi4 operator +(zvi4 op1, zvi4 op2)
+    {
+      int[] data = new int[op1.Length];
+      for (int i = 0; i < op1.Length; i++)
+        data[i] = op1.data[i] + op2.data[i];
+      return new zvi4(data);
+    }
+
+    /// <summary>
+    /// Multiply every value in this vector by a given number.
+    /// </summary>
+    /// <param name="op1"></param>
+    /// <param name="s"></param>
+    /// <returns></returns>
+    public static zvi4 operator *(zvi4 op1, int s)
+    {
+      int[] data = new int[op1.Length];
+      for (int i = 0; i < op1.Length; i++)
+        data[i] = op1.data[i] * s;
+      return new zvi4(data);
+    }
+
+    /// <summary>
+    /// Multiply every value in this vector by a given number.
+    /// </summary>
+    /// <param name="op1"></param>
+    /// <param name="s"></param>
+    /// <returns></returns>
+    public static zvi4 operator *(zvi4 op1, float s)
+    {
+      int[] data = new int[op1.Length];
+      for (int i = 0; i < op1.Length; i++)
+        data[i] = (int)(op1.data[i] * s);
+      return new zvi4(data);
+    }
+
+
+    /// <summary>
+    /// Arithmatic minus on element pairs.
+    /// Throws exception if two vectors are not the same length.
+    /// </summary>
+    /// <param name="op1"></param>
+    /// <param name="op2"></param>
+    /// <returns></returns>
+    public static zvi4 operator -(zvi4 op1, zvi4 op2)
+    { return op1 + op2 * -1; }
+
+    /// <summary>
+    /// Divide every value in this vector by a given number. 
+    /// Integer division rules apply.
+    /// </summary>
+    /// <param name="op1"></param>
+    /// <param name="s"></param>
+    /// <returns></returns>
+    public static zvi4 operator /(zvi4 op1, int s)
+    {
+      int[] data = new int[op1.Length];
+      for (int i = 0; i < op1.Length; i++)
+        data[i] = op1.data[i] / s;
+      return new zvi4(data);
+    }
+
+    /// <summary>
+    /// Divide every value in this vector by a given number. 
+    /// Integer division rules apply.
+    /// </summary>
+    /// <param name="op1"></param>
+    /// <param name="s"></param>
+    /// <returns></returns>
+    public static zvi4 operator /(zvi4 op1, float s)
+    {
+      int[] data = new int[op1.Length];
+      for (int i = 0; i < op1.Length; i++)
+        data[i] = (int)(op1.data[i] / s);
+      return new zvi4(data);
+    }
+
+    /// <summary>
+    /// Dot product with that vector.
+    /// Throws exception if two vectors are not the same length.
+    /// </summary>
+    /// <param name="that"></param>
+    /// <returns></returns>
+    public zvi4 dot(zvi4 that)
+    {
+      int[] data = new int[this.Length];
+      for (int i = 0; i < this.Length; i++)
+        data[i] = this.data[i] * that.data[i];
+      return new zvi4(data);
+    }
+
+    /// <summary>
+    /// Two vectors are == if they are the same length, and all values are the same.
+    /// </summary>
+    /// <param name="op1"></param>
+    /// <param name="op2"></param>
+    /// <returns></returns>
+    public static bool operator ==(zvi4 op1, zvi4 op2)
+    {
+      for (int i = 0; i < op1.Length; i++)
+        if (op1[i] != op2[i]) return false;
+
+      return true;
+    }
+
+    /// <summary>
+    /// Simply the negation of the == operator.
+    /// </summary>
+    /// <param name="op1"></param>
+    /// <param name="op2"></param>
+    /// <returns></returns>
+    public static bool operator !=(zvi4 op1, zvi4 op2)
+    {
+      return !(op1 == op2);
+    }
+
+    /// <summary>
+    /// This vector is equal to the other object if:
+    /// 1, Base.Equals pass.
+    /// 2, They are the same type.
+    /// 3, == check pass.
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <returns></returns>
+    public override bool Equals(object obj)
+    {
+      if (!base.Equals(obj)) return false;
+      if (obj.GetType() != this.GetType()) return false;
+      if (!(this == (zvi4)obj)) return false;
+      return true;
+    }
+
+    /// <summary>
+    /// Same as base.GetHashCode to make compiler shut up.
+    /// </summary>
+    /// <returns></returns>
+    public override int GetHashCode()
+    {
+      return base.GetHashCode();
+    }
+
+    /// <summary>
+    /// Return a string in the form of "[n1, n2, ... ]".
+    /// </summary>
+    /// <returns></returns>
+    public override string ToString()
+    {
+      return zusp.List("[]", ", ", data);
+    }
 
     public int x { get { return this[0]; } }
     public int y { get { return this[1]; } }
