@@ -11,6 +11,13 @@ namespace cn.zuoanqh.open.zut
   /// </summary>
   public static class zum
   {
+    private static Random r;
+
+    static zum()
+    {
+      r = new Random();
+    }
+
     /// <summary>
     /// Lowerbound n.
     /// </summary>
@@ -202,6 +209,26 @@ namespace cn.zuoanqh.open.zut
     public static double DiscretizeLogrithmic(double n, double Base)
     {
       return Math.Pow(Base, Math.Floor(Math.Log(n, Base)));
+    }
+
+    public static class random
+    {
+      /// <summary>
+      /// Perform Bernoulli trials until fail. Return number of trials performed. Minimum value is 1.
+      /// </summary>
+      /// <param name="FailChance"></param>
+      /// <returns></returns>
+      public static int NextBernoulli(double FailChance)
+      {
+        int ans=0;
+        while (true)
+        {
+          if (r.NextDouble() > FailChance)
+            ans++;
+          else
+            return ans + 1;
+        }
+      }
     }
   }
 }

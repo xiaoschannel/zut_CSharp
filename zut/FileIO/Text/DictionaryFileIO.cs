@@ -14,6 +14,26 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
   /// </summary>
   public static class DictionaryFileIO
   {
+    private static Dictionary<string, string> toDictionary(List<KeyValuePair<string, string>> data)
+    {
+      var ans = new Dictionary<string, string>();
+      foreach (var i in data)
+        ans.Add(i.Key, i.Value);
+      return ans;
+    }
+    private static List<KeyValuePair<string, string>> toList(Dictionary<string, string> data)
+    {
+      var ans = new List<KeyValuePair<string, string>>();
+      foreach (var i in data)
+        ans.Add(new KeyValuePair<string, string>(i.Key, i.Value));
+      return ans;
+    }
+
+    public static void writeFile(Dictionary<string, string> data, string separator, string fileName)
+    { writeFile(toList(data), separator, fileName); }
+
+    public static void writeFile(Dictionary<string, string> data, string separator, string absolutePath, string fileName)
+    { writeFile(toList(data), separator, absolutePath, fileName); }
     /// <summary>
     /// Write file into current directory.
     /// </summary>
