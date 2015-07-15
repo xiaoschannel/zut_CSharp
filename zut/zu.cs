@@ -61,7 +61,7 @@ namespace cn.zuoanqh.open.zut
     {
       return (one == null) ? other : one;
     }
-
+    
     //public static T NullIfFalse<T>(bool condition, T result)
     //{
     //  return (condition)?result:null;

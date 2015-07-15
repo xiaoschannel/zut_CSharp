@@ -44,7 +44,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// </summary>
     public static void Save()
     {
-      Save(DateTime.Now.ToString("yyyy_MM_dd___HH_mm_ss_fff") + ".txt");
+      Save("LoggerEntry_"+DateTime.Now.ToString("yyyy_MM_dd___HH_mm_ss_fff") + ".txt");
     }
 
     /// <summary>
