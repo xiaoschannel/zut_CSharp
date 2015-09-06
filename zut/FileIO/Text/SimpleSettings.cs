@@ -15,7 +15,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <summary>
     /// The name of setting file created by this class.
     /// </summary>
-    public const string FILE_NAME = "SimpleSettings.txt";
+    public const string FILE_NAME = "Settings.txt";
 
     /// <summary>
     /// Decides whether to save automatically after every single change.
@@ -123,7 +123,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     public static void Reload()
     {
       Content = new Dictionary<string, string>();
-      if (File.Exists(Directory.GetCurrentDirectory() + FILE_NAME))
+      if (File.Exists(Path.Combine(Directory.GetCurrentDirectory() , FILE_NAME)))
       {
         var t = DictionaryFileIO.readFile(": ", FILE_NAME);
         foreach (var i in t)

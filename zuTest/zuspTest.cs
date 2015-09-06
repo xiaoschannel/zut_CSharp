@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using cn.zuoanqh.open.zut.Data;
+using System.Collections.Generic;
 //using cn.zuoanqh.open.zut;
 
 namespace cn.zuoanqh.open.zut.unittest
@@ -98,6 +99,60 @@ namespace cn.zuoanqh.open.zut.unittest
 			Assert.AreEqual("30", ans[2]);
 			Assert.AreEqual("00", ans[3]);
 			Assert.AreEqual("08", ans[4]);
+		}
+
+		[TestMethod]
+		public void TestListSplit()
+		{
+			List<string> l = new List<string>();
+			l.Add("separator");
+			l.Add("data1");
+			l.Add("data2");
+			l.Add("data3");
+			l.Add("data4");
+			l.Add("separator");
+
+			var ans = zusp.ListSplit(l,"separator");
+			Assert.AreEqual(1, ans.Count);
+			var l0 = ans[0];
+			Assert.AreEqual(4, l0.Count);
+
+			l = new List<string>();
+			l.Add("data1");
+			l.Add("data2");
+			l.Add("separator");
+			l.Add("data3");
+			l.Add("separator");
+			l.Add("data4");
+
+			ans = zusp.ListSplit(l, "separator");
+			Assert.AreEqual(3, ans.Count);
+			l0 = ans[0];
+			var l1 = ans[1];
+			var l2 = ans[2];
+
+			Assert.AreEqual(2, l0.Count);
+			Assert.AreEqual(1, l1.Count);
+			Assert.AreEqual(1, l2.Count);
+
+		}
+
+
+		[TestMethod]
+		public void TestListToDictionary()
+		{
+			List<string> l = new List<string>();
+			l.Add("item name: asdf");
+			l.Add("item id: 12345");
+			l.Add("in stock: ");
+
+			var ans = zusp.ListToDictionary(l, ": ");
+			Assert.AreEqual(3, ans.Count);
+			Assert.AreEqual("asdf", ans["item name"]);
+			Assert.AreEqual("12345", ans["item id"]);
+			Assert.AreEqual("", ans["in stock"]);
+
+
 		}
 	}
 }

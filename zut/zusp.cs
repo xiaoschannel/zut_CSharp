@@ -114,6 +114,20 @@ namespace cn.zuoanqh.open.zut
 				Where(r => r.Trim().Length > 0).
 				Select(r => r).ToArray();
 		}
+
+		/// <summary>
+		/// Reverse what split does.
+		/// This is simply an alias of List(string, string[]).
+		/// </summary>
+		/// <param name="l"></param>
+		/// <param name="Separator"></param>
+		/// <returns></returns>
+		public static string Unsplit(string[] l, string Separator)
+		{
+			return List(Separator, l);
+		}
+
+
 		/// <summary>
 		/// Divide given string equally into two. String must have even number of charecters.
 		/// </summary>
@@ -201,7 +215,7 @@ namespace cn.zuoanqh.open.zut
 		}
 
 		/// <summary>
-		/// Divide the given string in to an array
+		/// Divide the given string in to an array by given lengths.
 		/// </summary>
 		/// <param name="s"></param>
 		/// <param name="lengths"></param>
@@ -226,7 +240,7 @@ namespace cn.zuoanqh.open.zut
 		}
 
 		/// <summary>
-		/// Pick
+		/// Pick strings of certain length separated by certain length. Yup.
 		/// </summary>
 		/// <param name="s"></param>
 		/// <param name="lengths"></param>
@@ -250,6 +264,67 @@ namespace cn.zuoanqh.open.zut
 				loc += lengths[i + 1];
 			}
 			ans[ans.Length - 1] = s.Substring(loc, lengths[lengths.Length - 1]);
+			return ans;
+		}
+
+		/// <summary>
+		/// Split one list to many lists by a given separator. Separator will not be in the results.
+		/// </summary>
+		/// <param name="l"></param>
+		/// <param name="Separator"></param>
+		/// <returns></returns>
+		public static List<List<string>> ListSplit(List<string> l, string Separator)
+		{
+			List<List<string>> ans = new List<List<string>>();
+			List<string> current = new List<string>();
+
+			foreach (string s in l)
+			{
+				if (s.Equals(Separator))
+				{
+					if (current.Count != 0)
+					{
+						ans.Add(current);
+						current = new List<string>();
+					}
+				}
+				else
+					current.Add(s);
+			}
+			if (current.Count != 0)
+				ans.Add(current);
+
+			return ans;
+		}
+
+		public static List<string> ListUnsplit(List<List<string>> ls, string Separator)
+		{
+			List<string> ans = new List<string>();
+			foreach (var l in ls)
+			{
+				foreach (var s in l)
+				{
+					ans.Add(s);
+				}
+				ans.Add(Separator);
+			}
+			return ans;
+		}
+
+		/// <summary>
+		/// Convert a DictionaryFileIO style list of string into a dictionary. no multilines, sorry!
+		/// </summary>
+		/// <param name="l"></param>
+		/// <param name="Separator"></param>
+		/// <returns></returns>
+		public static Dictionary<string, string> ListToDictionary(List<string> l, string Separator)
+		{
+			Dictionary<string, string> ans = new Dictionary<string, string>();
+			foreach (string s in l)
+			{
+				var t = zusp.CutFirst(s, Separator);
+				ans.Add(t.First, t.Second);
+			}
 			return ans;
 		}
 	}
