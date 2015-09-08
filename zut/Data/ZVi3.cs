@@ -141,14 +141,23 @@ namespace cn.zuoanqh.open.zut.Data
       return new zvi3(data);
     }
 
-    /// <summary>
-    /// Two vectors are == if they are the same length, and all values are the same.
-    /// </summary>
-    /// <param name="op1"></param>
-    /// <param name="op2"></param>
-    /// <returns></returns>
+		/// <summary>
+		/// Since vectors aren't mutable, equal and == are the same.
+		/// Implemented according to https://msdn.microsoft.com/en-US/library/ms173147(v=vs.80).aspx
+		/// </summary>
+		/// <param name="op1"></param>
+		/// <param name="op2"></param>
+		/// <returns></returns>
     public static bool operator ==(zvi3 op1, zvi3 op2)
     {
+			// If both are null, or both are same instance, return true.
+			if (System.Object.ReferenceEquals(op1, op2))
+				return true;
+
+			// If one is null, but not both, return false.
+			if (((object)op1 == null) || ((object)op2 == null))
+				return false;
+
       for (int i = 0; i < op1.Length; i++)
         if (op1[i] != op2[i]) return false;
 
@@ -166,22 +175,37 @@ namespace cn.zuoanqh.open.zut.Data
       return !(op1 == op2);
     }
 
-    /// <summary>
-    /// This vector is equal to the other object if:
-    /// 1, Base.Equals pass.
-    /// 2, They are the same type.
-    /// 3, == check pass.
-    /// </summary>
+		/// <summary>
+		/// Since vectors aren't mutable, equal and == are the same.
+		/// Implemented According to https://msdn.microsoft.com/en-US/library/ms173147(v=vs.80).aspx
+		/// </summary>
     /// <param name="obj"></param>
     /// <returns></returns>
     public override bool Equals(object obj)
     {
-      if (!base.Equals(obj)) return false;
-      if (obj.GetType() != this.GetType()) return false;
-      if (!(this == (zvi3)obj)) return false;
-      return true;
-    }
+			if (obj == null) return false;
+			zvi3 that = obj as zvi3;
+			if ((object)that == null) return false;
 
+			for (int i = 0; i < this.Length; i++)
+				if (this[i] != that[i]) return false;
+
+			return true;
+    }
+		/// <summary>
+		/// Type-specific version of Equals(object).
+		/// </summary>
+		/// <param name="obj"></param>
+		/// <returns></returns>
+		public bool Equals(zvi3 obj)
+		{
+			if ((object)obj == null) return false;
+
+			for (int i = 0; i < this.Length; i++)
+				if (this[i] != obj[i]) return false;
+
+			return true;
+		}
     /// <summary>
     /// Same as base.GetHashCode to make compiler shut up.
     /// </summary>
