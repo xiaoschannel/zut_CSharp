@@ -142,6 +142,34 @@ namespace cn.zuoanqh.open.zut.Data
 		}
 
 		/// <summary>
+		/// Apply the given function to all elements of this vector.
+		/// Use this overload when same function applied to all elements.
+		/// #experimental
+		/// </summary>
+		/// <param name="func"></param>
+		/// <returns></returns>
+		public zvi2 toAll(Func<int, int> func)
+		{
+			int[] data = new int[this.Length];
+			for (int i = 0; i < this.Length; i++)
+				data[i] = func.Invoke(this.data[i]);
+			return new zvi2(data);
+		}
+		/// <summary>
+		/// Apply the given function to all elements of this vector
+		/// Use this overload when you need to know which element it is.
+		/// </summary>
+		/// <param name="func"></param>
+		/// <returns></returns>
+		public zvi2 toAll(Func<int, int, int> func)
+		{
+			int[] data = new int[this.Length];
+			for (int i = 0; i < this.Length; i++)
+				data[i] = func.Invoke(i, this.data[i]);
+			return new zvi2(data);
+		}
+
+		/// <summary>
 		/// Since vectors aren't mutable, equal and == are the same.
 		/// Implemented according to https://msdn.microsoft.com/en-US/library/ms173147(v=vs.80).aspx
 		/// </summary>

@@ -44,7 +44,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// </summary>
     public static void Save()
     {
-      Save("LoggerEntry_"+DateTime.Now.ToString("yyyy_MM_dd___HH_mm_ss_fff") + ".txt");
+      Save("LoggerEntry_" + DateTime.Now.ToString("yyyy_MM_dd___HH_mm_ss_fff") + ".txt");
     }
 
     /// <summary>
@@ -54,7 +54,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     public static void Save(string FileName)
     {
       if (!Directory.Exists(Path.Combine(Directory.GetCurrentDirectory(), "Logger"))) Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), "Logger"));
-      ByLineFileIO.writeFile(current, Path.Combine(Directory.GetCurrentDirectory(), "Logger"), FileName);
+      ByLineFileIO.writeFile(current, Path.Combine("Logger", FileName));
       current = new List<string>();
     }
   }

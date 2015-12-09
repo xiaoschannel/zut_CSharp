@@ -14,14 +14,24 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
   /// </summary>
   public static class DictionaryFileIO
   {
-    private static Dictionary<string, string> toDictionary(List<KeyValuePair<string, string>> data)
+    /// <summary>
+    /// Converts data format.
+    /// </summary>
+    /// <param name="data"></param>
+    /// <returns></returns>
+    public static Dictionary<string, string> toDictionary(List<KeyValuePair<string, string>> data)
     {
       var ans = new Dictionary<string, string>();
       foreach (var i in data)
         ans.Add(i.Key, i.Value);
       return ans;
     }
-    private static List<KeyValuePair<string, string>> toList(Dictionary<string, string> data)
+    /// <summary>
+    /// Converts data format.
+    /// </summary>
+    /// <param name="data"></param>
+    /// <returns></returns>
+    public static List<KeyValuePair<string, string>> toList(Dictionary<string, string> data)
     {
       var ans = new List<KeyValuePair<string, string>>();
       foreach (var i in data)
@@ -29,66 +39,60 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
       return ans;
     }
 
-    public static void writeFile(Dictionary<string, string> data, string separator, string fileName)
-    { writeFile(toList(data), separator, fileName); }
+    /// <summary>
+    /// Writes data into given file.
+    /// </summary>
+    /// <param name="data"></param>
+    /// <param name="separator"></param>
+    /// <param name="fPath"></param>
+    public static void writeFile(Dictionary<string, string> data, string separator, string fPath)
+    { writeFile(toList(data), separator, fPath); }
 
-    public static void writeFile(Dictionary<string, string> data, string separator, string absolutePath, string fileName)
-    { writeFile(toList(data), separator, absolutePath, fileName); }
     /// <summary>
-    /// Write file into current directory.
+    /// Writes data into given file.
+    /// This is the implementation.
     /// </summary>
     /// <param name="data"></param>
     /// <param name="separator"></param>
-    /// <param name="fileName"></param>
-    public static void writeFile(List<KeyValuePair<string, string>> data, string separator, string fileName)
+    /// <param name="fPath"></param>
+    public static void writeFile(List<KeyValuePair<string, string>> data, string separator, string fPath)
     {
-      writeFile(data, separator, Directory.GetCurrentDirectory(), fileName);
-    }
-    /// <summary>
-    /// Write file into given directory.
-    /// </summary>
-    /// <param name="data"></param>
-    /// <param name="separator"></param>
-    /// <param name="absolutePath"></param>
-    /// <param name="fileName"></param>
-    public static void writeFile(List<KeyValuePair<string, string>> data, string separator, string absolutePath, string fileName)
-    {
-      string fpath = Path.Combine(absolutePath, fileName);
-      using (StreamWriter writer = new StreamWriter(fpath, false, Encoding.UTF8))
+      using (StreamWriter writer = new StreamWriter(zuio.toAbsolutePath(fPath), false, Encoding.UTF8))
       {
         for (int i = 0; i < data.Count; i++)
         {
-          if (data[i].Key.Trim().Length != 0)
+          if (data[i].Key.Trim().Length != 0)//do you actually had a key there?
             writer.WriteLine(data[i].Key + separator + data[i].Value);
           else
             writer.WriteLine(data[i].Value);
         }
       }
     }
+
     /// <summary>
-    /// Read file from current directory.
+    /// Read file from given directory. Assumes UTF-8 encoding.
     /// </summary>
     /// <param name="separator"></param>
-    /// <param name="fileName"></param>
+    /// <param name="fPath"></param>
     /// <returns></returns>
-    public static List<KeyValuePair<string, string>> readFile(string separator, string fileName)
-    {
-      return readFile(separator, Directory.GetCurrentDirectory(), fileName);
-    }
+    public static List<KeyValuePair<string, string>> readFile(string separator, string fPath)
+    { return readFile(separator, fPath, Encoding.UTF8); }
+
     /// <summary>
-    /// Read file from given directory.
+    /// Read file from given directory. Uses given encoding.
     /// </summary>
     /// <param name="separator"></param>
-    /// <param name="absolutePath"></param>
-    /// <param name="fileName"></param>
+    /// <param name="fPath"></param>
+    /// <param name="encoding"></param>
     /// <returns></returns>
-    public static List<KeyValuePair<string, string>> readFile(string separator, string absolutePath, string fileName)
+    public static List<KeyValuePair<string, string>> readFile(string separator, string fPath, Encoding encoding)
     {
       List<KeyValuePair<string, string>> data = new List<KeyValuePair<string, string>>();
-      List<string> lines = ByLineFileIO.readFileVerbatim(fileName, absolutePath);
+      List<string> lines = ByLineFileIO.readFileVerbatim(fPath,encoding);
+
       int l = 0;//line number
       while (true)
-      {
+      {//These codes are like, pre zusp.
         if (l >= lines.Count) break;
         string s = lines[l];
         int ind = s.IndexOf(separator);
@@ -104,30 +108,6 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
         l++;
       }
       return data;
-    }
-    /// <summary>
-    /// Return the first line of given file in current directory.
-    /// </summary>
-    /// <param name="fileName"></param>
-    /// <returns></returns>
-    public static string peekFile(string fileName)
-    {
-      return peekFile(Directory.GetCurrentDirectory(), fileName);
-    }
-    /// <summary>
-    /// Return the first line of given file in given directory.
-    /// </summary>
-    /// <param name="absolutePath"></param>
-    /// <param name="fileName"></param>
-    /// <returns></returns>
-    public static string peekFile(string absolutePath, string fileName)
-    {
-      string fpath = Path.Combine(absolutePath, fileName);
-      using (StreamReader reader = new StreamReader(fpath, Encoding.UTF8))
-      {
-        if (reader.Peek() == -1) return null;
-        return reader.ReadLine();
-      }
     }
   }
 }

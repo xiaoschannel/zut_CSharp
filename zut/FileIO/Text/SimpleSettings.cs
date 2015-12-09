@@ -15,7 +15,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <summary>
     /// The name of setting file created by this class.
     /// </summary>
-    public const string FILE_NAME = "Settings.txt";
+    public const string FILE_NAME = "Settings.zut.txt";
 
     /// <summary>
     /// Decides whether to save automatically after every single change.
@@ -63,9 +63,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <param name="Key"></param>
     /// <returns></returns>
     public static string GetString(string Key)
-    {
-      return Content[Key];
-    }
+    { return Content[Key]; }
 
     /// <summary>
     /// 
@@ -73,9 +71,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <param name="Key"></param>
     /// <returns></returns>
     public static int GetInt(string Key)
-    {
-      return Convert.ToInt32(Content[Key]);
-    }
+    { return Convert.ToInt32(Content[Key]); }
 
     /// <summary>
     /// Increases setting value by 1. Assumes it's an int.
@@ -98,18 +94,14 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <param name="Key"></param>
     /// <returns></returns>
     public static float GetFloat(string Key)
-    {
-      return Convert.ToSingle(Content[Key]);
-    }
+    { return Convert.ToSingle(Content[Key]); }
     /// <summary>
     /// 
     /// </summary>
     /// <param name="Key"></param>
     /// <returns></returns>
     public static double GetDouble(string Key)
-    {
-      return Convert.ToDouble(Content[Key]);
-    }
+    { return Convert.ToDouble(Content[Key]); }
     /// <summary>
     /// Save current settings. If you don't do this, nothing will be saved.
     /// </summary>
@@ -127,14 +119,10 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
       {
         var t = DictionaryFileIO.readFile(": ", FILE_NAME);
         foreach (var i in t)
-        {
           Content.Add(i.Key, i.Value);
-        }
       }
       else
-      {
         File.Create(Directory.GetCurrentDirectory() + FILE_NAME);
-      }
     }
 
   }

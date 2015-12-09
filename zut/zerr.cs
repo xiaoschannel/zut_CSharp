@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -69,6 +70,14 @@ namespace cn.zuoanqh.open.zut
       foreach (string s in words)
         Console.Write(s + " ");
       Console.WriteLine();
+    }
+    /// <summary>
+    /// Returns method name.
+    /// </summary>
+    /// <returns></returns>
+    public static string mname()
+    {
+      return new StackTrace().GetFrame(1).GetMethod().ToString();
     }
   }
 }

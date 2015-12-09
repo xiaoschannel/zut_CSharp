@@ -154,5 +154,47 @@ namespace cn.zuoanqh.open.zut.unittest
 
 
 		}
-	}
+
+        [TestMethod]
+        public void TestCommonPrefixPostfix()
+        {
+            List<string> l = new List<string>();
+
+            l.Add("prefix");
+            l.Add("prefix1");
+            l.Add("prefix123");
+            Assert.AreEqual("prefix", zusp.GetCommonPrefix(l));
+
+            l.Clear();
+            l.Add("brefix");
+            l.Add("prefix1");
+            l.Add("prefix1");
+            Assert.AreEqual("", zusp.GetCommonPrefix(l));
+
+            l.Clear();
+            l.Add("prafix");
+            l.Add("prefix1");
+            l.Add("prefix1");
+            Assert.AreEqual("pr", zusp.GetCommonPrefix(l));
+
+            l.Clear();
+            l.Add("postfix");
+            l.Add("1postfix");
+            l.Add("123postfix");
+            Assert.AreEqual("postfix", zusp.GetCommonPostfix(l));
+
+            l.Clear();
+            l.Add("postfiy");
+            l.Add("1postfix");
+            l.Add("123postfix");
+            Assert.AreEqual("", zusp.GetCommonPostfix(l));
+
+            l.Clear();
+            l.Add("postnix");
+            l.Add("1postfix");
+            l.Add("123postfix");
+            Assert.AreEqual("ix", zusp.GetCommonPostfix(l));
+        }
+
+    }
 }
