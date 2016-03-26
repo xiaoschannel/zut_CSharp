@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace cn.zuoanqh.open.zut.FileIO.Text
@@ -18,9 +19,19 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// </summary>
     /// <param name="lines"></param>
     /// <param name="fPath"></param>
-    public static void writeFile(List<string> lines, string fPath)
+    public static void WriteFile(List<string> lines, string fPath)
     {
-      using (StreamWriter writer = new StreamWriter(zuio.toAbsolutePath(fPath), false, Encoding.UTF8))
+      WriteFile(lines, fPath, Encoding.UTF8);
+    }
+    /// <summary>
+    /// Also, FUCK SHIFT-JIS
+    /// </summary>
+    /// <param name="lines"></param>
+    /// <param name="fPath"></param>
+    /// <param name="encoding"></param>
+    public static void WriteFile(List<string> lines, string fPath, Encoding encoding)
+    {
+      using (StreamWriter writer = new StreamWriter(zuio.ToAbsolutePath(fPath), false, encoding))
       {
         for (int i = 0; i < lines.Count; i++)
           writer.WriteLine(lines[i]);
@@ -32,9 +43,9 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// </summary>
     /// <param name="fPath"></param>
     /// <returns></returns>
-    public static List<string> readFileVerbatim(string fPath)
+    public static List<string> ReadFileVerbatim(string fPath)
     {
-      return readFile(fPath, false, false, Encoding.UTF8);
+      return ReadFile(fPath, false, false, Encoding.UTF8);
     }
     /// <summary>
     /// Read file from given directory. Reads with whitespace preserved and empty lines.
@@ -43,9 +54,9 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <param name="fPath"></param>
     /// <param name="encoding"></param>
     /// <returns></returns>
-    public static List<string> readFileVerbatim(string fPath, Encoding encoding)
+    public static List<string> ReadFileVerbatim(string fPath, Encoding encoding)
     {
-      return readFile(fPath, false, false, encoding);
+      return ReadFile(fPath, false, false, encoding);
     }
     /// <summary>
     /// Read file from given directory. This will trim all lines and ignore empty lines.
@@ -53,9 +64,9 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// </summary>
     /// <param name="fPath"></param>
     /// <returns></returns>
-    public static List<string> readFileNoWhitespace(string fPath)
+    public static List<string> ReadFileNoWhitespace(string fPath)
     {
-      return readFile(fPath, true, true, Encoding.UTF8);
+      return ReadFile(fPath, true, true, Encoding.UTF8);
     }
     /// <summary>
     /// Read file from given directory. This will trim all lines and ignore empty lines.
@@ -64,9 +75,9 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <param name="fPath"></param>
     /// <param name="encoding"></param>
     /// <returns></returns>
-    public static List<string> readFileNoWhitespace(string fPath, Encoding encoding)
+    public static List<string> ReadFileNoWhitespace(string fPath, Encoding encoding)
     {
-      return readFile(fPath, true, true, encoding);
+      return ReadFile(fPath, true, true, encoding);
     }
     /// <summary>
     /// The ugly read file function that give you all features. Other functions are implemented using this one.
@@ -76,9 +87,9 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <param name="ignoreSpace"></param>
     /// <param name="ignoreEmptyLine"></param>
     /// <returns></returns>
-    public static List<string> readFile(string fPath, bool ignoreSpace, bool ignoreEmptyLine)
+    public static List<string> ReadFile(string fPath, bool ignoreSpace, bool ignoreEmptyLine)
     {
-      return readFile(fPath, ignoreSpace, ignoreEmptyLine, Encoding.UTF8);
+      return ReadFile(fPath, ignoreSpace, ignoreEmptyLine, Encoding.UTF8);
     }
 
     /// <summary>
@@ -91,21 +102,26 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <param name="ignoreEmptyLine"></param>
     /// <param name="encoding"></param>
     /// <returns></returns>
-    public static List<string> readFile(string fPath, bool ignoreSpace, bool ignoreEmptyLine, Encoding encoding)
+    public static List<string> ReadFile(string fPath, bool ignoreSpace, bool ignoreEmptyLine, Encoding encoding)
     {
-      List<string> lines = new List<string>();
-      using (StreamReader reader = new StreamReader(zuio.toAbsolutePath(fPath), encoding))
+      List<string> ans = new List<string>();
+      StopWatch sw = new StopWatch();
+      using (StreamReader reader = new StreamReader(zuio.ToAbsolutePath(fPath), encoding))
       {
-        while (true)
+        if (reader.Peek() == -1) return ans;
+
+        string text = reader.ReadToEnd();
+        foreach (string s in Regex.Split(text, "\r\n|\r|\n"))
         {
-          if (reader.Peek() == -1) break;
-          string line = reader.ReadLine();
+          string line = s;
           if (ignoreSpace) line = line.Trim();
           if (ignoreEmptyLine && line.Length == 0) continue;
-          lines.Add(line);
+
+          ans.Add(line);
         }
       }
-      return lines;
+    
+      return ans;
     }
-  }
+}
 }

@@ -8,7 +8,7 @@ namespace cn.zuoanqh.open.zut.Data
 {
   /// <summary>
   /// Zuoanqh's Vector of ints.
-  /// A functional vector that allows arbitary length.
+  /// A functional vector that allows arbitrary length.
   /// </summary>
   public class zvi
   {
@@ -43,7 +43,7 @@ namespace cn.zuoanqh.open.zut.Data
     { return this.Length == that.Length; }
 
     /// <summary>
-    /// Arithmatic add on element pairs.
+    /// Arithmetic add on element pairs.
     /// Throws exception if two vectors are not the same length.
     /// </summary>
     /// <param name="op1"></param>
@@ -88,7 +88,7 @@ namespace cn.zuoanqh.open.zut.Data
 
 
     /// <summary>
-    /// Arithmatic minus on element pairs.
+    /// Arithmetic minus on element pairs.
     /// Throws exception if two vectors are not the same length.
     /// </summary>
     /// <param name="op1"></param>

@@ -46,6 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\DictionaryDataObject.cs" />
+    <Compile Include="Data\VirtualArray.cs" />
     <Compile Include="Data\zvf.cs" />
     <Compile Include="Data\zvf2.cs" />
     <Compile Include="Data\zvf3.cs" />

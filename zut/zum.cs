@@ -11,6 +11,11 @@ namespace cn.zuoanqh.open.zut
   /// </summary>
   public static class zum
   {
+    /// <summary>
+    /// Because it saves a couple calculations.
+    /// </summary>
+    public const double PHI = 2 * Math.PI;
+
     private static Random r;
 
     static zum()
@@ -143,7 +148,7 @@ namespace cn.zuoanqh.open.zut
     /// <returns>Closest multiple of factor. Rounds down.</returns>
     public static float DiscretizeLinear(float n, float Factor)
     {
-      return ((float)(Math.Floor(n/Factor)))*Factor;
+      return ((float)(Math.Floor(n / Factor))) * Factor;
     }
     /// <summary>
     /// Discretizes a function linearly. Example: 
@@ -159,7 +164,7 @@ namespace cn.zuoanqh.open.zut
       return Math.Floor(n / Factor) * Factor;
     }
     /// <summary>
-    /// Discretizes a function logrithmically. Example: 
+    /// Discretizes a function logarithmically. Example: 
     ///         base 2
     /// Number: 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
     /// Result: 1  2  2  4  4  4  4  8  8  8  8  8  8  8  8 16
@@ -172,7 +177,7 @@ namespace cn.zuoanqh.open.zut
       return (int)(Math.Pow(Base, Math.Floor(Math.Log(n, Base))));
     }
     /// <summary>
-    /// Discretizes a function logrithmically. Example: 
+    /// Discretizes a function logarithmically. Example: 
     ///         base 2
     /// Number: 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
     /// Result: 1  2  2  4  4  4  4  8  8  8  8  8  8  8  8 16
@@ -185,7 +190,7 @@ namespace cn.zuoanqh.open.zut
       return (long)(Math.Pow(Base, Math.Floor(Math.Log(n, Base))));
     }
     /// <summary>
-    /// Discretizes a function logrithmically. Example: 
+    /// Discretizes a function logarithmically. Example: 
     ///         base 2
     /// Number: 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
     /// Result: 1  2  2  4  4  4  4  8  8  8  8  8  8  8  8 16
@@ -198,7 +203,7 @@ namespace cn.zuoanqh.open.zut
       return (float)(Math.Pow(Base, Math.Floor(Math.Log(n, Base))));
     }
     /// <summary>
-    /// Discretizes a function logrithmically. Example: 
+    /// Discretizes a function logarithmically. Example: 
     ///         base 2
     /// Number: 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
     /// Result: 1  2  2  4  4  4  4  8  8  8  8  8  8  8  8 16
@@ -211,7 +216,10 @@ namespace cn.zuoanqh.open.zut
       return Math.Pow(Base, Math.Floor(Math.Log(n, Base)));
     }
 
-    public static class random
+    /// <summary>
+    /// Sub-namespace for random number related methods.
+    /// </summary>
+    public static class RandomUtil
     {
       /// <summary>
       /// Perform Bernoulli trials until fail. Return number of trials performed. Minimum value is 1.
@@ -220,7 +228,7 @@ namespace cn.zuoanqh.open.zut
       /// <returns></returns>
       public static int NextBernoulli(double FailChance)
       {
-        int ans=0;
+        int ans = 0;
         while (true)
         {
           if (r.NextDouble() > FailChance)
@@ -228,6 +236,17 @@ namespace cn.zuoanqh.open.zut
           else
             return ans + 1;
         }
+      }
+
+      /// <summary>
+      /// Returns a random element from given list.
+      /// </summary>
+      /// <typeparam name="T"></typeparam>
+      /// <param name="l"></param>
+      /// <returns></returns>
+      public static T FromList<T>(List<T> l)
+      {
+        return l[r.Next(0, l.Count)];
       }
     }
   }

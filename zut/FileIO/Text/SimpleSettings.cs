@@ -19,7 +19,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
 
     /// <summary>
     /// Decides whether to save automatically after every single change.
-    /// It's efficent to disable when doing a lot of changes at once.
+    /// It's efficient to disable when doing a lot of changes at once.
     /// </summary>
     public static bool AutoSave = true;
     /// <summary>
@@ -34,6 +34,8 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
 
     /// <summary>
     /// Set default value of things.
+    /// Make sure to do this before getting value. 
+    /// This does not change things if there already is a value.
     /// </summary>
     /// <param name="Key"></param>
     /// <param name="DefaultValue"></param>
@@ -107,7 +109,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// </summary>
     public static void Save()
     {
-      DictionaryFileIO.writeFile(Content, ": ", FILE_NAME);
+      DictionaryFileIO.WriteFile(Content, ": ", FILE_NAME);
     }
     /// <summary>
     /// Abandon changes, revert to saved file.
@@ -117,7 +119,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
       Content = new Dictionary<string, string>();
       if (File.Exists(Path.Combine(Directory.GetCurrentDirectory() , FILE_NAME)))
       {
-        var t = DictionaryFileIO.readFile(": ", FILE_NAME);
+        var t = DictionaryFileIO.ReadFile(": ", FILE_NAME);
         foreach (var i in t)
           Content.Add(i.Key, i.Value);
       }

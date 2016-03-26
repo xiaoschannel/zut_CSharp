@@ -15,11 +15,11 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <summary>
     /// The data to be written.
     /// </summary>
-    public static List<string> current;
+    public static List<string> Current;
 
     static Logger()
     {
-      current = new List<string>();
+      Current = new List<string>();
     }
     /// <summary>
     /// Add a line.
@@ -27,7 +27,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <param name="Line"></param>
     public static void Log(string Line)
     {
-      current.Add(Line);
+      Current.Add(Line);
     }
 
     /// <summary>
@@ -44,18 +44,33 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// </summary>
     public static void Save()
     {
-      Save("LoggerEntry_" + DateTime.Now.ToString("yyyy_MM_dd___HH_mm_ss_fff") + ".txt");
+      string fname = "LoggerEntry_" + DateTime.Now.ToString("yyyy_MM_dd___HH_mm_ss_fff") + ".txt";
+      Save(fname, false);
+    }
+    /// <summary>
+    /// Save the log with default file name and open with default application.
+    /// </summary>
+    public static void SaveAndOpen()
+    {
+      string fname = "LoggerEntry_" + DateTime.Now.ToString("yyyy_MM_dd___HH_mm_ss_fff") + ".txt";
+      Save(fname, true);
     }
 
     /// <summary>
     /// Save the log with given file name.
     /// </summary>
     /// <param name="FileName"></param>
-    public static void Save(string FileName)
+    /// <param name="Open">Open the file afterwards.</param>
+    public static void Save(string FileName, bool Open)
     {
       if (!Directory.Exists(Path.Combine(Directory.GetCurrentDirectory(), "Logger"))) Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), "Logger"));
-      ByLineFileIO.writeFile(current, Path.Combine("Logger", FileName));
-      current = new List<string>();
+      ByLineFileIO.WriteFile(Current, Path.Combine("Logger", FileName));
+      Current = new List<string>();
+      if (Open)
+      {
+        System.Diagnostics.Process.Start(Path.Combine(Directory.GetCurrentDirectory(), Path.Combine("Logger", FileName)));
+      }
     }
+
   }
 }

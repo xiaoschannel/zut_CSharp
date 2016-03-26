@@ -17,27 +17,49 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// </summary>
     /// <param name="path"></param>
     /// <returns></returns>
-    public static string toAbsolutePath(string path)
+    public static string ToAbsolutePath(string path)
     {
       if (!Path.IsPathRooted(path))
         return Path.Combine(Directory.GetCurrentDirectory(), path);
       else
         return path;
     }
-
     /// <summary>
+    /// Use the first kilobyte only.
     /// Use Ude.CharsetDetector to find the encoding of things.
     /// Returns empty string upon errors. (for now, duh)
     /// </summary>
     /// <param name="fPath">If non-absolute path given, assumes relative path under current directory.</param>
     /// <returns></returns>
-    public static string getEncUde(string fPath)
+    public static string GetEncUde(string fPath)
     {
-      using (FileStream fs = File.OpenRead(toAbsolutePath(fPath)))
+      return GetEncUde(fPath, 1024);
+    }
+    /// <summary>
+    /// Use Ude.CharsetDetector to find the encoding of things.
+    /// Returns empty string upon errors. (for now, duh)
+    /// </summary>
+    /// <param name="fPath">If non-absolute path given, assumes relative path under current directory.</param>
+    /// <param name="bytesToUse">for full file, use -1.</param>
+    /// <returns></returns>
+    public static string GetEncUde(string fPath,int bytesToUse)
+    {
+      using (FileStream fs = File.OpenRead(ToAbsolutePath(fPath)))
       {
         Ude.CharsetDetector cdet = new Ude.CharsetDetector();
-        cdet.Feed(fs);
-        cdet.DataEnd();
+
+        if (bytesToUse == -1)
+        {
+          cdet.Feed(fs);
+          cdet.DataEnd();
+        }
+        else
+        {
+          byte[] b = new byte[bytesToUse];
+          int len = fs.Read(b, 0, b.Length);
+          cdet.Feed(b, 0, len);
+          cdet.DataEnd();
+        }
         if (cdet.Charset != null)
           return cdet.Charset;
         else
@@ -51,9 +73,9 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// </summary>
     /// <param name="fPath">If non-absolute path given, assumes relative path under current directory.</param>
     /// <returns></returns>
-    public static string peekFile(string fPath)
+    public static string PeekFile(string fPath)
     {
-      return peekFile(fPath, Encoding.UTF8);
+      return PeekFile(fPath, Encoding.UTF8);
     }
     /// <summary>
     /// 
@@ -61,7 +83,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <param name="fPath">If non-absolute path given, assumes relative path under current directory.</param>
     /// <param name="encoding"></param>
     /// <returns></returns>
-    public static string peekFile(string fPath,  Encoding encoding)
+    public static string PeekFile(string fPath,  Encoding encoding)
     {
       using (StreamReader reader = new StreamReader(fPath, encoding))
       {

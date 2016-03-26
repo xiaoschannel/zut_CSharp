@@ -19,7 +19,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// </summary>
     /// <param name="data"></param>
     /// <returns></returns>
-    public static Dictionary<string, string> toDictionary(List<KeyValuePair<string, string>> data)
+    public static Dictionary<string, string> ToDictionary(List<KeyValuePair<string, string>> data)
     {
       var ans = new Dictionary<string, string>();
       foreach (var i in data)
@@ -31,7 +31,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// </summary>
     /// <param name="data"></param>
     /// <returns></returns>
-    public static List<KeyValuePair<string, string>> toList(Dictionary<string, string> data)
+    public static List<KeyValuePair<string, string>> ToList(Dictionary<string, string> data)
     {
       var ans = new List<KeyValuePair<string, string>>();
       foreach (var i in data)
@@ -45,8 +45,8 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <param name="data"></param>
     /// <param name="separator"></param>
     /// <param name="fPath"></param>
-    public static void writeFile(Dictionary<string, string> data, string separator, string fPath)
-    { writeFile(toList(data), separator, fPath); }
+    public static void WriteFile(Dictionary<string, string> data, string separator, string fPath)
+    { WriteFile(ToList(data), separator, fPath); }
 
     /// <summary>
     /// Writes data into given file.
@@ -55,9 +55,9 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <param name="data"></param>
     /// <param name="separator"></param>
     /// <param name="fPath"></param>
-    public static void writeFile(List<KeyValuePair<string, string>> data, string separator, string fPath)
+    public static void WriteFile(List<KeyValuePair<string, string>> data, string separator, string fPath)
     {
-      using (StreamWriter writer = new StreamWriter(zuio.toAbsolutePath(fPath), false, Encoding.UTF8))
+      using (StreamWriter writer = new StreamWriter(zuio.ToAbsolutePath(fPath), false, Encoding.UTF8))
       {
         for (int i = 0; i < data.Count; i++)
         {
@@ -75,8 +75,8 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <param name="separator"></param>
     /// <param name="fPath"></param>
     /// <returns></returns>
-    public static List<KeyValuePair<string, string>> readFile(string separator, string fPath)
-    { return readFile(separator, fPath, Encoding.UTF8); }
+    public static List<KeyValuePair<string, string>> ReadFile(string separator, string fPath)
+    { return ReadFile(separator, fPath, Encoding.UTF8); }
 
     /// <summary>
     /// Read file from given directory. Uses given encoding.
@@ -85,14 +85,14 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <param name="fPath"></param>
     /// <param name="encoding"></param>
     /// <returns></returns>
-    public static List<KeyValuePair<string, string>> readFile(string separator, string fPath, Encoding encoding)
+    public static List<KeyValuePair<string, string>> ReadFile(string separator, string fPath, Encoding encoding)
     {
       List<KeyValuePair<string, string>> data = new List<KeyValuePair<string, string>>();
-      List<string> lines = ByLineFileIO.readFileVerbatim(fPath,encoding);
+      List<string> lines = ByLineFileIO.ReadFileVerbatim(fPath,encoding);
 
       int l = 0;//line number
       while (true)
-      {//These codes are like, pre zusp.
+      {//These codes are like, pre-zusp.
         if (l >= lines.Count) break;
         string s = lines[l];
         int ind = s.IndexOf(separator);

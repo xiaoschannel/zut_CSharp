@@ -9,7 +9,7 @@ namespace cn.zuoanqh.open.zut.Data
 	/// <summary>
 	/// This class is exactly the same as ZVi, except it can only be created with two elements.
 	/// </summary>
-	public class zvi2
+	public class zvi2:IEquatable<zvi2>
 	{
 		private int[] data;
 		/// <summary>
@@ -44,7 +44,7 @@ namespace cn.zuoanqh.open.zut.Data
 		public int Length { get { return this.data.Length; } }
 
 		/// <summary>
-		/// Arithmatic add on element pairs.
+		/// Arithmetic add on element pairs.
 		/// Throws exception if two vectors are not the same length.
 		/// </summary>
 		/// <param name="op1"></param>
@@ -88,7 +88,7 @@ namespace cn.zuoanqh.open.zut.Data
 
 
 		/// <summary>
-		/// Arithmatic minus on element pairs.
+		/// Arithmetic minus on element pairs.
 		/// Throws exception if two vectors are not the same length.
 		/// </summary>
 		/// <param name="op1"></param>
@@ -242,7 +242,7 @@ namespace cn.zuoanqh.open.zut.Data
 		/// <returns></returns>
 		public override int GetHashCode()
 		{
-			return base.GetHashCode();
+			return this[0].GetHashCode()+this[1].GetHashCode();
 		}
 
 		/// <summary>

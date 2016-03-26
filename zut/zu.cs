@@ -11,7 +11,7 @@ namespace cn.zuoanqh.open.zut
   /// <summary>
   /// Zuoanqh's Utility class of general algorithms. It's named "zu" because zut.zut is weird.
   /// Note it is intended for the name to be in lowercase, since it's easier to type in only lowercase. 
-  /// These are shorthands that dosen't have fancy OOP purpouses really.
+  /// These are shorthands that doesn't have fancy OOP purposes really.
   /// </summary>
   public static class zu
   {
@@ -49,6 +49,14 @@ namespace cn.zuoanqh.open.zut
         Process.Start(targetDirectory);
       else
         zerr.e("zut.openDirectory", "Directory not exist: " + targetDirectory);
+    }
+    /// <summary>
+    /// does what the name suggests.
+    /// </summary>
+    /// <param name="fpath"></param>
+    public static void OpenContainingDirectoryAndSelect(string fpath)
+    {
+      Process.Start("explorer.exe", "/select," + fpath);
     }
     /// <summary>
     /// Logic method. 

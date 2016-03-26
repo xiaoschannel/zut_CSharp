@@ -66,7 +66,7 @@ namespace cn.zuoanqh.open.zut
       v.Items.Add(t);
     }
     /// <summary>
-    /// Create a string by concatonating item's texts in given list view, sepearated by a space.
+    /// Create a string by concatenating item's texts in given list view, separated by a space.
     /// </summary>
     /// <param name="l"></param>
     /// <returns></returns>
@@ -192,7 +192,7 @@ namespace cn.zuoanqh.open.zut
       return zusp.ChopRight(ans, 2).First;
     }
     /// <summary>
-    /// Avoids setting text to clipboard if given string does not have actual charecters.
+    /// Avoids setting text to clipboard if given string does not have actual characters.
     /// </summary>
     /// <param name="s"></param>
     public static void Clipboard_SetTextIfNotEmpty(string s)

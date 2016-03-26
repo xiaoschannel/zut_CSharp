@@ -40,7 +40,7 @@ namespace cn.zuoanqh.open.zut
       offset += t / 1000;
     }
     /// <summary>
-    /// Return the time elasped in miliseconds since last clicked.
+    /// Return the time elapsed in milliseconds since last clicked.
     /// </summary>
     /// <returns></returns>
     public double Click()
