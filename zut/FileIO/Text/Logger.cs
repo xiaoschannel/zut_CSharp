@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PCLStorage;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
   /// </summary>
   public static class Logger
   {
+    public const string FOLDER_NAME = "Logger";
+
     /// <summary>
     /// The data to be written.
     /// </summary>
@@ -58,17 +61,20 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
 
     /// <summary>
     /// Save the log with given file name.
+    /// Open currently don't work, sorry.
     /// </summary>
     /// <param name="FileName"></param>
     /// <param name="Open">Open the file afterwards.</param>
     public static void Save(string FileName, bool Open)
     {
-      if (!Directory.Exists(Path.Combine(Directory.GetCurrentDirectory(), "Logger"))) Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), "Logger"));
+      //while the below statement is ambigous, we believe it does the whole "create if not exist" thingy.
+      var folder = zuio.CURRENT_DIRECTORY.CreateFolderAsync(FOLDER_NAME,CreationCollisionOption.OpenIfExists);
+      
       ByLineFileIO.WriteFile(Current, Path.Combine("Logger", FileName));
       Current = new List<string>();
       if (Open)
-      {
-        System.Diagnostics.Process.Start(Path.Combine(Directory.GetCurrentDirectory(), Path.Combine("Logger", FileName)));
+      {//TODO:FIX THIS SHIT
+        //System.Diagnostics.Process.Start(Path.Combine(Directory.GetCurrentDirectory(), Path.Combine("Logger", FileName)));
       }
     }
 

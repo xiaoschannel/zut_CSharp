@@ -24,6 +24,7 @@ namespace cn.zuoanqh.open.zut.Data
     {
       this.get = Get;
       this.set = Set;
+      this.length = Length;
     }
 
     /// <summary>

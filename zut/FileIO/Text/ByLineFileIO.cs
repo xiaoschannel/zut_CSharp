@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PCLStorage;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <param name="encoding"></param>
     public static void WriteFile(List<string> lines, string fPath, Encoding encoding)
     {
-      using (StreamWriter writer = new StreamWriter(zuio.ToAbsolutePath(fPath), false, encoding))
+      using (StreamWriter writer = new StreamWriter(zuio.PathToStream(fPath, FileAccess.ReadAndWrite), encoding))
       {
         for (int i = 0; i < lines.Count; i++)
           writer.WriteLine(lines[i]);
@@ -105,8 +106,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     public static List<string> ReadFile(string fPath, bool ignoreSpace, bool ignoreEmptyLine, Encoding encoding)
     {
       List<string> ans = new List<string>();
-      StopWatch sw = new StopWatch();
-      using (StreamReader reader = new StreamReader(zuio.ToAbsolutePath(fPath), encoding))
+      using (StreamReader reader = new StreamReader(zuio.PathToStream(fPath, FileAccess.ReadAndWrite), encoding))
       {
         if (reader.Peek() == -1) return ans;
 
@@ -120,8 +120,8 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
           ans.Add(line);
         }
       }
-    
+
       return ans;
     }
-}
+  }
 }

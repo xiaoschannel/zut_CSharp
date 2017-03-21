@@ -9,6 +9,7 @@ namespace cn.zuoanqh.open.zut
   /// <summary>
   /// A StopWatch used for timing tasks for optimization.
   /// </summary>
+ [Obsolete("there already is a aystem.diagnostics.stopwatch")]
   public class StopWatch
   {
     /// <summary>

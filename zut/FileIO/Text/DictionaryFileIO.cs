@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PCLStorage;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -57,7 +58,7 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     /// <param name="fPath"></param>
     public static void WriteFile(List<KeyValuePair<string, string>> data, string separator, string fPath)
     {
-      using (StreamWriter writer = new StreamWriter(zuio.ToAbsolutePath(fPath), false, Encoding.UTF8))
+      using (StreamWriter writer = new StreamWriter(zuio.PathToStream(fPath, FileAccess.ReadAndWrite), Encoding.UTF8))
       {
         for (int i = 0; i < data.Count; i++)
         {

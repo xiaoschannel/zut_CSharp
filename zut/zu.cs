@@ -40,25 +40,6 @@ namespace cn.zuoanqh.open.zut
       return new Tuple<List<T>, List<T>>(added, deleted);
     }
     /// <summary>
-    /// Open the given directory if exists. If not, a debug error message will be printed.
-    /// </summary>
-    /// <param name="targetDirectory"></param>
-    public static void openDirectory(string targetDirectory)
-    {
-      if (Directory.Exists(targetDirectory))
-        Process.Start(targetDirectory);
-      else
-        zerr.e("zut.openDirectory", "Directory not exist: " + targetDirectory);
-    }
-    /// <summary>
-    /// does what the name suggests.
-    /// </summary>
-    /// <param name="fpath"></param>
-    public static void OpenContainingDirectoryAndSelect(string fpath)
-    {
-      Process.Start("explorer.exe", "/select," + fpath);
-    }
-    /// <summary>
     /// Logic method. 
     /// </summary>
     /// <typeparam name="T"></typeparam>
@@ -67,7 +48,7 @@ namespace cn.zuoanqh.open.zut
     /// <returns>Other, if one is null. Else one.</returns>
     public static T OtherIfNull<T>(T one, T other)
     {
-      return (one == null) ? other : one;
+			return (one == null) ? other : one;
     }
     
     //public static T NullIfFalse<T>(bool condition, T result)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PCLStorage;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -19,11 +20,12 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
 
     /// <summary>
     /// Decides whether to save automatically after every single change.
-    /// It's efficient to disable when doing a lot of changes at once.
+    /// It's efficient to disable when doing a lot of changes at once, convenient to leave it true.
     /// </summary>
     public static bool AutoSave = true;
+
     /// <summary>
-    /// Where everything is. Play nice with it, ok?
+    /// Internal data representation.
     /// </summary>
     public static Dictionary<string, string> Content;
 
@@ -117,14 +119,16 @@ namespace cn.zuoanqh.open.zut.FileIO.Text
     public static void Reload()
     {
       Content = new Dictionary<string, string>();
-      if (File.Exists(Path.Combine(Directory.GetCurrentDirectory() , FILE_NAME)))
+
+      if (zuio.CURRENT_DIRECTORY.CheckExistsAsync(FILE_NAME).Result == ExistenceCheckResult.FileExists)
       {
         var t = DictionaryFileIO.ReadFile(": ", FILE_NAME);
         foreach (var i in t)
           Content.Add(i.Key, i.Value);
       }
       else
-        File.Create(Directory.GetCurrentDirectory() + FILE_NAME);
+        FileSystem.Current.LocalStorage.CreateFileAsync(FILE_NAME,CreationCollisionOption.FailIfExists);
+      //dont know why would collision happen, better be careful here
     }
 
   }

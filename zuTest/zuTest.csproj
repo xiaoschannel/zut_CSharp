@@ -52,12 +52,13 @@
   <ItemGroup>
     <Compile Include="DataTest.cs" />
     <Compile Include="zumTest.cs" />
+    <Compile Include="zuioTest.cs" />
     <Compile Include="zuspTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\zut\zut.csproj">
-      <Project>{aa557199-ca45-4581-8822-6ecf9efb80a3}</Project>
+      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
       <Name>zut</Name>
     </ProjectReference>
   </ItemGroup>

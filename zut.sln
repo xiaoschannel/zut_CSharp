@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zut", "zut\zut.csproj", "{AA557199-CA45-4581-8822-6ECF9EFB80A3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zuTest", "zuTest\zuTest.csproj", "{EF436538-8ADB-4427-B439-F26693E37A33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zut_win", "zut_win\zut_win.csproj", "{A60A21D9-A08C-40BF-B339-9FC506E92EA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zut", "zut\zut.csproj", "{67F9D3A8-F71E-4428-913F-C37AE82CDB24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,16 +15,54 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AA557199-CA45-4581-8822-6ECF9EFB80A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA557199-CA45-4581-8822-6ECF9EFB80A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA557199-CA45-4581-8822-6ECF9EFB80A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA557199-CA45-4581-8822-6ECF9EFB80A3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EF436538-8ADB-4427-B439-F26693E37A33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EF436538-8ADB-4427-B439-F26693E37A33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF436538-8ADB-4427-B439-F26693E37A33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF436538-8ADB-4427-B439-F26693E37A33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A60A21D9-A08C-40BF-B339-9FC506E92EA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A60A21D9-A08C-40BF-B339-9FC506E92EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A60A21D9-A08C-40BF-B339-9FC506E92EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A60A21D9-A08C-40BF-B339-9FC506E92EA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67F9D3A8-F71E-4428-913F-C37AE82CDB24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67F9D3A8-F71E-4428-913F-C37AE82CDB24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67F9D3A8-F71E-4428-913F-C37AE82CDB24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67F9D3A8-F71E-4428-913F-C37AE82CDB24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = Mono
+		$2.scope = text/plain
+		$2.FileWidth = 120
+		$2.TabWidth = 2
+		$2.IndentWidth = 2
+		$2.inheritsScope = text/plain
+		$0.CSharpFormattingPolicy = $3
+		$3.IndentSwitchSection = True
+		$3.NewLinesForBracesInProperties = True
+		$3.NewLinesForBracesInAccessors = True
+		$3.NewLinesForBracesInAnonymousMethods = True
+		$3.NewLinesForBracesInControlBlocks = True
+		$3.NewLinesForBracesInAnonymousTypes = True
+		$3.NewLinesForBracesInObjectCollectionArrayInitializers = True
+		$3.NewLinesForBracesInLambdaExpressionBody = True
+		$3.NewLineForElse = True
+		$3.NewLineForCatch = True
+		$3.NewLineForFinally = True
+		$3.NewLineForMembersInObjectInit = True
+		$3.NewLineForMembersInAnonymousTypes = True
+		$3.NewLineForClausesInQuery = True
+		$3.SpacingAfterMethodDeclarationName = False
+		$3.SpaceAfterMethodCallName = False
+		$3.SpaceBeforeOpenSquareBracket = False
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/x-csharp
+		$3.scope = text/x-csharp
 	EndGlobalSection
 EndGlobal
