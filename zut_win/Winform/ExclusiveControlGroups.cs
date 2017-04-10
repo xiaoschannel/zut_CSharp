@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace cn.zuoanqh.open.zut.Winform
+namespace zuoanqh.libzut.win
 {
   /// <summary>
   /// A class for managing exclusive groups of controls where only one group can be visible at a time, or no group visible at all.
@@ -17,14 +17,14 @@ namespace cn.zuoanqh.open.zut.Winform
     /// <summary>
     /// Key of the group that is currently visible. "default" if no group is visible.
     /// </summary>
-    public K currentGroup { get; private set; }
+    public K CurrentGroup { get; private set; }
     /// <summary>
     /// 
     /// </summary>
     public ExclusiveControlGroups()
     {
       groups = new Dictionary<K, ISet<Control>>();
-      currentGroup = default(K);
+      CurrentGroup = default(K);
     }
 
     /// <summary>
@@ -32,7 +32,7 @@ namespace cn.zuoanqh.open.zut.Winform
     /// </summary>
     /// <param name="key"></param>
     /// <param name="group"></param>
-    public void addGroup(K key, ISet<Control> group)
+    public void AddGroup(K key, ISet<Control> group)
     {
       if (groups.ContainsKey(key)) throw new ArgumentException("There already exists a control group with key: " + key);
       groups.Add(key, group);
@@ -47,7 +47,7 @@ namespace cn.zuoanqh.open.zut.Winform
     /// Set all controls in the given group visible, others invisible.
     /// </summary>
     /// <param name="key">The identifier for the group to set visible of.</param>
-    public void switchTo(K key)
+    public void SwitchTo(K key)
     {
       if (!groups.ContainsKey(key)) throw new ArgumentException("No control group have the given key: " + key);
       foreach (var s in groups)
@@ -56,25 +56,25 @@ namespace cn.zuoanqh.open.zut.Winform
         foreach (var c in s.Value)
           c.Visible = t;
       }
-      currentGroup = key;
+      CurrentGroup = key;
     }
     /// <summary>
     /// Set all control groups invisible.
     /// </summary>
-    public void switchOffAll()
+    public void SwitchOffAll()
     {
       foreach (var s in groups)
         foreach (var c in s.Value)
           c.Visible = false;
-      currentGroup = default(K);
+      CurrentGroup = default(K);
     }
     /// <summary>
     /// 
     /// </summary>
     /// <returns></returns>
-    public ISet<Control> getCurrentGroup()
+    public ISet<Control> GetCurrentGroup()
     {
-      return (currentGroup.Equals(default(K))) ? null : groups[currentGroup];
+      return (CurrentGroup.Equals(default(K))) ? null : groups[CurrentGroup];
     }
 
     

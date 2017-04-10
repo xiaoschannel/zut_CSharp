@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cn.zuoanqh.open.zut
+namespace zuoanqh.libzut.win
 {
   /// <summary>
   /// Zuoanqh's utility for ERRor handling.

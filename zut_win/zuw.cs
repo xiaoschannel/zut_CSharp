@@ -1,5 +1,4 @@
-﻿using PCLStorage;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -7,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cn.zuoanqh.open.zut.win
+namespace zuoanqh.libzut.win
 {
   public class zuw
   {
@@ -17,7 +16,7 @@ namespace cn.zuoanqh.open.zut.win
     /// Open the given directory if exists. If not, a debug error message will be printed.
     /// </summary>
     /// <param name="targetDirectory"></param>
-    public static void openDirectory(string targetDirectory)
+    public static void OpenDirectory(string targetDirectory)
     {
       if (Directory.Exists(targetDirectory))
         Process.Start(targetDirectory);

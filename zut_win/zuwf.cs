@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace cn.zuoanqh.open.zut
+namespace zuoanqh.libzut.win
 {
   /// <summary>
   /// Zuoanqh's Utility for Windows Forms.
