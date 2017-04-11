@@ -14,7 +14,7 @@ namespace zuoanqh.libzut.Testing
     public void TestLogger()
     {
       Logger.Log("Hey world!");
-      Logger.SaveAndOpen();
+      Logger.Save();
     }
 
     [TestMethod]

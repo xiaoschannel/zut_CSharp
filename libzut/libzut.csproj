@@ -6,7 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ude.NetStandard" Version="1.0.0" />
+    <PackageReference Include="Ude.NetStandard" Version="1.0.1" />
+	<PackageReference Include="NETStandard.Library" Version="1.6.0" />
   </ItemGroup>
 
 </Project>
