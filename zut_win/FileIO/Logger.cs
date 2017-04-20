@@ -13,25 +13,38 @@ namespace zuoanqh.libzut.win.FileIO
   /// </summary>
   public static class Logger
   {
+    /// <summary>
+    /// The default folder name for Logger.
+    /// </summary>
     public const string FOLDER_NAME = "Logger";
+    /// <summary>
+    /// The date format used by Logger (for public references).
+    /// </summary>
     public const string DATE_FORMAT = "yyyy_MM_dd___HH_mm_ss_fff";
+
+    /// <summary>
+    /// Where will Logger save its files.
+    /// </summary>
+    public static string LogDirectory;
 
     /// <summary>
     /// The data to be written.
     /// </summary>
-    public static List<string> Current;
+    public static List<string> Logs;
 
     static Logger()
     {
-      Current = new List<string>();
+      LogDirectory = Path.Combine(Directory.GetCurrentDirectory(), FOLDER_NAME);
+      Logs = new List<string>();
     }
+
     /// <summary>
     /// Add a line.
     /// </summary>
     /// <param name="Line"></param>
     public static void Log(string Line)
     {
-      Current.Add(Line);
+      Logs.Add(Line);
     }
 
     /// <summary>
@@ -68,16 +81,15 @@ namespace zuoanqh.libzut.win.FileIO
     /// <param name="Open">Open the file afterwards.</param>
     public static void Save(string FileName, bool Open)
     {
-      var dir = Path.Combine(Directory.GetCurrentDirectory(), FOLDER_NAME);
+      string fPath = Path.Combine(LogDirectory, FileName);
+      if (!Directory.Exists(LogDirectory))
+        Directory.CreateDirectory(LogDirectory);
 
-      if (!Directory.Exists(dir))
-        Directory.CreateDirectory(dir);
-      ByLineFileIO.WriteFile(Current, Path.Combine(FOLDER_NAME, FileName));
-
-      Current = new List<string>();
+      ByLineFileIO.WriteFile(Logs, fPath);
+      Logs.Clear();
       if (Open)
       {
-        System.Diagnostics.Process.Start(Path.Combine(dir, FileName));
+        System.Diagnostics.Process.Start(fPath);
       }
     }
 

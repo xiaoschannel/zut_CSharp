@@ -33,7 +33,7 @@ namespace zuoanqh.libzut.FileIO
     /// <returns></returns>
     public static Encoding GetEncUde(string fPath)
     {
-      return GetEncUde(fPath, 1024);
+      return GetEncUde(fPath, 4096);
     }
     /// <summary>
     /// Use Ude.CharsetDetector to find the encoding of things.
@@ -63,13 +63,38 @@ namespace zuoanqh.libzut.FileIO
         if (cdet.Charset != null)
           return Encoding.GetEncoding(cdet.Charset);
         else
-          //{
-          //if (bytesToUse == -1)
-          throw new InvalidDataException("Unknown Encoding for given file.");
-        //else
-        //  return GetEncUde(fPath, -1);
-        //}
+          return null;
       }
+    }
+
+    /// <summary>
+    /// if fails, return given default.
+    /// </summary>
+    /// <param name="fPath"></param>
+    /// <param name="bytesToUse"></param>
+    /// <param name="defaultEncoding"></param>
+    /// <returns></returns>
+    public static Encoding GetEncUde(string fPath, int bytesToUse, Encoding defaultEncoding)
+    {
+      return GetEncUde(fPath, bytesToUse, defaultEncoding, false);
+    }
+
+    /// <summary>
+    /// if fails, retry with all bytes. if still fails, use given default.
+    /// </summary>
+    /// <param name="fPath"></param>
+    /// <param name="bytesToUse"></param>
+    /// <param name="defaultEncoding"></param>
+    /// <param name="retry"></param>
+    /// <returns></returns>
+    public static Encoding GetEncUde(string fPath, int bytesToUse, Encoding defaultEncoding, bool retry)
+    {
+      var ret = GetEncUde(fPath, bytesToUse);
+      if (ret == null && retry)
+        ret = GetEncUde(fPath, -1);
+      if (ret == null)
+        ret = defaultEncoding;
+      return ret;
     }
 
     /// <summary>
