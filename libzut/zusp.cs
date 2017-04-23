@@ -141,6 +141,8 @@ namespace zuoanqh.libzut
     {
       return s.Split(Separator, StringSplitOptions.None).ToArray();
     }
+
+    [Obsolete("Use string.join for this.")]
     /// <summary>
     /// Reverse what split does.
     /// This is simply an alias of List(string, string[]).
@@ -193,6 +195,8 @@ namespace zuoanqh.libzut
       }
       return s.ToString();
     }
+
+    [Obsolete("Use string.join for this.")]
     /// <summary>
     /// List given items into a string, items separated with given delimiter.
     /// </summary>
