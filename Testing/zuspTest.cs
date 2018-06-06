@@ -25,7 +25,7 @@ namespace zuoanqh.libzut.Testing
 		public void TestList()
 		{
 			Assert.AreEqual("[1, 2]", zusp.List("[]", ", ", 1, 2));
-			Assert.AreEqual("1, 2", zusp.List(", ", 1, 2));
+			Assert.AreEqual("1, 2", String.Join(", ", 1, 2));
 			Assert.AreEqual("[1, 2]", zusp.List("[]", ", ", new object[] { 1, 2 }));
 		}
 

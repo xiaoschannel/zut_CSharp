@@ -111,14 +111,14 @@ namespace zuoanqh.libzut.Data
     public List<string> ToStringList(string separator)
     { return this.Select((s) => s.Key + separator + s.Value).ToList(); }
 
-    /// <summary>
-    /// Converts the object back to text with given separator.
-    /// </summary>
-    /// <param name="separator"></param>
-    /// <returns></returns>
-    public string ToString(string separator)
-    {
-      return zusp.List("\r\n", ToStringList(separator).ToArray()) + "\r\n";
+        /// <summary>
+        /// Converts the object back to text with given separator.
+        /// </summary>
+        /// <param name="separator"></param>
+        /// <returns></returns>
+        public string ToString(string separator)
+        {
+            return String.Join("\r\n", ToStringList(separator).ToArray()) + "\r\n";
+        }
     }
-  }
 }
